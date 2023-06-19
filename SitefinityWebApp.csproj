@@ -188,6 +188,41 @@
       <HintPath>bin\MaxMind.GeoIP2.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
+      <HintPath>bin\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging">
+      <HintPath>bin\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols">
+      <HintPath>bin\Microsoft.IdentityModel.Protocols.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <HintPath>bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.WsFederation">
+      <HintPath>bin\Microsoft.IdentityModel.Protocols.WsFederation.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens">
+      <HintPath>bin\Microsoft.IdentityModel.Tokens.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Xml">
+      <HintPath>bin\Microsoft.IdentityModel.Xml.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.SharePoint.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Microsoft.SharePoint.Client.dll</HintPath>
@@ -546,6 +581,7 @@
       <HintPath>bin\System.Linq.Async.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Security" />
     <Reference Include="System.Threading.Tasks.Extensions">
       <HintPath>bin\System.Threading.Tasks.Extensions.dll</HintPath>
       <Private>True</Private>
@@ -767,6 +803,11 @@
     <Reference Include="Telerik.Sitefinity.Frontend.Media">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Telerik.Sitefinity.Frontend.Media.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Frontend.Recommendations">
+      <HintPath>bin\Telerik.Sitefinity.Frontend.Recommendations.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
       <Private>True</Private>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Frontend.Search">
@@ -1222,10 +1263,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AzureWebRole.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AppointmentTasksHelper.cs" />
+    <Compile Include="Helpers\DoctorHelper.cs" />
+    <Compile Include="Helpers\DynamicContentEventHelper.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\EnquiryTaskHelper.cs" />
+    <Compile Include="Helpers\ExternalApiHelper.cs" />
+    <Compile Include="Helpers\FrontendUrlHelper.cs" />
+    <Compile Include="Helpers\GetAllRelationsByParent.cs" />
+    <Compile Include="Helpers\HtmlPageHelper.cs" />
+    <Compile Include="Helpers\IDataEventHelper.cs" />
+    <Compile Include="Helpers\IHHConstants.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\ManagerHelper.cs" />
+    <Compile Include="Helpers\OldPatchDoctorHelper.cs" />
+    <Compile Include="Helpers\PantaiDoctor.cs" />
+    <Compile Include="Helpers\PantaiDoctorClinicHour.cs" />
+    <Compile Include="Helpers\PantaiSpecialty.cs" />
+    <Compile Include="Helpers\RelationHelper.cs" />
+    <Compile Include="Helpers\RoleHelper.cs" />
+    <Compile Include="Helpers\TaxonomyHelper.cs" />
+    <Compile Include="Helpers\UserHelper.cs" />
+    <Compile Include="IHHDynamicModuleProvider.cs" />
+    <Compile Include="IHHLabelResources.cs" />
+    <Compile Include="Mvc\Controllers\ScriptAddTimeStampController.cs" />
+    <Compile Include="Mvc\Controllers\StyleAddTimeStampController.cs" />
+    <Compile Include="Mvc\Models\ScriptAddTimeStampModel.cs" />
+    <Compile Include="Mvc\Models\StyleAddTimeStampModel.cs" />
+    <Compile Include="PatchDoctor.aspx.cs">
+      <DependentUpon>PatchDoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatchDoctor.aspx.designer.cs">
+      <DependentUpon>PatchDoctor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="PatchDoctor.aspx" />
     <Content Include="Sitefinity\Default.aspx" />
     <Content Include="Sitefinity\Services\Analytics\AnalyticsPermissionsService.svc" />
     <Content Include="Sitefinity\Services\Analytics\DashboardData.svc" />
@@ -1357,6 +1437,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Data\GeoLocation\GeoLite2-City.mmdb" />
+    <Content Include="ViewPage1.cshtml" />
+    <Content Include="ViewPage2.cshtml" />
+    <Content Include="ViewPage3.cshtml" />
+    <Content Include="Sitefinity\ExternalLibraries\LibWebP\libwebp_x64.sflib" />
+    <Content Include="Sitefinity\ExternalLibraries\LibWebP\libwebp_x86.sflib" />
+    <Content Include="Mvc\Views\StyleAddTimeStamp\index.cshtml" />
+    <Content Include="Mvc\Views\ScriptAddTimeStamp\index.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

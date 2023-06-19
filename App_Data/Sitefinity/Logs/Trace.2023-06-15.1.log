@@ -1,0 +1,175 @@
+----------------------------------------
+Timestamp: 6/14/2023 1:00:08 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 6/14/2023 1:00:08 AM. End time: 6/14/2023 1:00:08 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:38 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:38 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: APpoiintment not image base64 value, SKIP
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: APpoiintment not image base64 value, SKIP
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : Updated
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : Updated
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:39 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : Updated
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:44 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : Updated
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:44 AM
+
+Message: contentType : Telerik.Sitefinity.DynamicTypes.Model.Form.Appointments action : New
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 1:30:44 AM
+
+Message: APpoiintment not image base64 value, SKIP
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 6:01:03 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/14/2023 6:01:03 AM. End time: 6/14/2023 6:01:03 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 12:01:00 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/14/2023 12:01:00 PM. End time: 6/14/2023 12:01:00 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/14/2023 6:01:08 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/14/2023 6:01:08 PM. End time: 6/14/2023 6:01:08 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:01 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 6/15/2023 12:00:01 AM. End time: 6/15/2023 12:00:01 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:01 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ExternalNotifications.ExternalNotificationsRetrieverTask'. Start time: 6/15/2023 12:00:01 AM. End time: 6/15/2023 12:00:01 AM. Task data: '{}'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:05 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ServiceHooks.Scheduling.ServiceHooksActivitiesCleanupTask'. Start time: 6/15/2023 12:00:05 AM. End time: 6/15/2023 12:00:05 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:05 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.Data.TransientDataCleanupTask'. Start time: 6/15/2023 12:00:05 AM. End time: 6/15/2023 12:00:05 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:05 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Services.Notifications.Scheduling.NotificationsCleanupTask'. Start time: 6/15/2023 12:00:05 AM. End time: 6/15/2023 12:00:05 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:00:06 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 6/15/2023 12:00:06 AM. End time: 6/15/2023 12:00:06 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 12:01:05 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/15/2023 12:01:05 AM. End time: 6/15/2023 12:01:05 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/15/2023 1:00:04 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Versioning.Cleaner.VersioningCleanerTask'. Start time: 6/15/2023 1:00:04 AM. End time: 6/15/2023 1:00:04 AM. Task data: ''
+
+
+----------------------------------------

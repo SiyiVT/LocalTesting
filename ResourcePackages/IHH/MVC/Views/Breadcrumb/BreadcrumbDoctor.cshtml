@@ -1,0 +1,68 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.Breadcrumb.BreadcrumbViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using SitefinityWebApp.Helpers;
+
+<div class="ihh-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-12 col-lg-11 mx-auto">
+                <div class="breadcrumb">
+                    @for (int i = 0; i < Model.SiteMapNodes.Count; i++)
+                    {
+                        if (FrontendUrlHelper.IsDetailPage())
+                        {
+                            var node = Model.SiteMapNodes[i];
+
+                            if (i == Model.SiteMapNodes.Count - 1 && Model.ShowCurrentPageInTheEnd)
+                            {
+                                <div class="breadcrumb-item"><a href="@node.Url">@node.Title</a></div>
+                                <div class="breadcrumb-item active" aria-current="page">Dr Name</div>
+                            }
+                            else
+                            {
+                                if (node.Title == "IHH")
+                                {
+                                    <div class="breadcrumb-item"><a href="@node.Url">@Html.Resource("Home", "_IHHLabel")</a></div>
+                                }
+                                else if (node.Title == "Our Hospitals")
+                                {
+                                    <div class="breadcrumb-item"><a href="/">@node.Title</a></div>
+                                }
+                                else
+                                {
+                                    <div class="breadcrumb-item"><a href="@node.Url">@node.Title</a></div>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            var node = Model.SiteMapNodes[i];
+
+                            if (i == Model.SiteMapNodes.Count - 1 && Model.ShowCurrentPageInTheEnd)
+                            {
+                                <div class="breadcrumb-item active" aria-current="page">@node.Title</div>
+                            }
+                            else
+                            {
+                                if (node.Title == "IHH")
+                                {
+                                    <div class="breadcrumb-item"><a href="@node.Url">@Html.Resource("Home", "_IHHLabel")</a></div>
+                                }
+                                else if (node.Title == "Our Hospitals")
+                                {
+                                    <div class="breadcrumb-item"><a href="/">@node.Title</a></div>
+                                }
+                                else
+                                {
+                                    <div class="breadcrumb-item"><a href="@node.Url">@node.Title</a></div>
+                                }
+                            }
+                        }
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+----------------------------------------
+Timestamp: 5/22/2023 6:18:26 AM
+
+Message: Db Migration Complexity: Extending
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/22/2023 6:18:26 AM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/22/2023 6:18:26 AM
+
+Message: Adding a foreign key constraint(s) to an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/22/2023 6:18:26 AM
+
+Message: -- add column for field Touristdestinations.Shop_idn
+ALTER TABLE [travelguides_touristdestinations] ADD [shop_idn] NVARCHAR(MAX) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 5/22/2023 6:18:27 AM
+
+Message: -- add column for field Touristdestinations.Shop
+ALTER TABLE [travelguides_touristdestinations] ADD [Shop] NVARCHAR(MAX) NULL
+
+
+----------------------------------------

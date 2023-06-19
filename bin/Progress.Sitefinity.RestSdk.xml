@@ -1,0 +1,3974 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Progress.Sitefinity.RestSdk</name>
+    </assembly>
+    <members>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ClientFactory">
+            <summary>
+            Factory class for producing clients.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ClientFactory.GetContentLocationsClient(System.Net.Http.HttpClient)">
+            <summary>
+            Gets the content locations client.
+            </summary>
+            <param name="httpClient">The http client to use.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs">
+            <summary>
+            DTO class for changing the priority of the location.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs.#ctor(System.String,Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs"/> class.
+            </summary>
+            <param name="id">The location id.</param>
+            <param name="movingDirection">The position of the location.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs.Id">
+            <summary>
+            Gets the location id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs.MovingDirection">
+            <summary>
+            Gets the <see cref="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs.MovingDirection" />.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs">
+            <summary>
+            Args for getting the location of the item.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs"/> class.
+            </summary>
+            <param name="itemType">The item type.</param>
+            <param name="itemProvider">The item provider.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs.ItemType">
+            <summary>
+            Gets the item type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs.ItemProvider">
+            <summary>
+            Gets the item provider.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient">
+            <summary>
+            Interface for working with content locations.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient.GetLocations(Progress.Sitefinity.RestSdk.Admin.ContentLocations.GetLocationsArgs)">
+            <summary>
+            Gets the content locations for the provided item type and provider.
+            </summary>
+            <param name="args">The item type and provider.</param>
+            <returns>The locations.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient.ChangeContentLocationPriority(Progress.Sitefinity.RestSdk.Admin.ContentLocations.ChangeLocationPriorityArgs)">
+            <summary>
+            Changes the priority of the location.
+            </summary>
+            <param name="args">The location arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClientExtensions">
+            <summary>
+            Extension methods for the <see cref="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient" /> interface.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClientExtensions.GetLocations(Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient,Progress.Sitefinity.RestSdk.Dto.SdkItem)">
+            <summary>
+            Gets the possible locations for the specified item.
+            </summary>
+            <param name="client">The <see cref="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient" /> interface.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <returns>The locations.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClientExtensions.ChangeContentLocationPriority(Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient,Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location,Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection)">
+            <summary>
+            Changes the priority of the location.
+            </summary>
+            <param name="client">The <see cref="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.IContentLocationsClient" /> interface.</param>
+            <param name="location">The location.</param>
+            <param name="movingDirection">The moving direction.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location">
+            <summary>
+            DTO class for working with locations.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location.Priority">
+            <summary>
+            Gets or sets the priority.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Admin.ContentLocations.Location.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection">
+            <summary>
+            Specifies the possible moving operations.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection.Bottom">
+            <summary>
+            The item will be moved at the bottom of the collection.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection.Down">
+            <summary>
+            The item will be moved down.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection.Up">
+            <summary>
+            The item will be moved up.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Admin.ContentLocations.MovingDirection.Top">
+            <summary>
+            The item will be moved at the top of the collection.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.BoundActionArgs">
+            <summary>
+            The arguments for making an action call.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.BoundActionArgs.Data">
+            <summary>
+            Gets or sets the data to be passed to the service.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.BoundFunctionArgs">
+            <summary>
+            The arguments for making a function call.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.BoundFunctionArgs.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.BoundFunctionArgs.Id">
+            <summary>
+            Gets or sets the id of the item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.CommonArgs">
+            <summary>
+            The common arguments for web service calls.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CommonArgs.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CommonArgs.Provider">
+            <summary>
+            Gets or sets the provider.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CommonArgs.Culture">
+            <summary>
+            Gets or sets the culture.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.CreateArgs">
+            <summary>
+            The args class used for creating items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CreateArgs.Data">
+            <summary>
+            Gets or sets the data to be passed to the service.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CreateArgs.ContentType">
+            <summary>
+            Gets or sets the request content type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.CreateArgs.Encoding">
+            <summary>
+            Gets or sets specific endoding.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.DeleteArgs">
+            <summary>
+            The args class used for deleting items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.DeleteArgs.Id">
+            <summary>
+            Gets or sets the id of the item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.DeleteRelationArgs">
+            <summary>
+            The args class used for removing relations.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.DeleteRelationArgs.Id">
+            <summary>
+            Gets or sets the id of the item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.DeleteRelationArgs.RelationName">
+            <summary>
+            Gets or sets the relation name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.DeleteRelationArgs.RelatedItemId">
+            <summary>
+            Gets or sets the id of the related item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.GetAllArgs">
+            <summary>
+            The args class used for getting a collection of items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetAllArgs.Count">
+            <summary>
+            Gets or sets a value indicating whether to retrieve the total count of the items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetAllArgs.OrderBy">
+            <summary>
+            Gets or sets the order by clauses.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetAllArgs.Skip">
+            <summary>
+            Gets or sets the skip count.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetAllArgs.Take">
+            <summary>
+            Gets or sets the take count.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetAllArgs.Filter">
+            <summary>
+            Gets or sets the filter <see cref="T:Progress.Sitefinity.RestSdk.Filters.FilterClause"/> or <see cref="T:Progress.Sitefinity.RestSdk.Filters.CombinedFilter"/>.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.GetByIdsArgs">
+            <summary>
+            The args class used for getting a collection of items by ids.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetByIdsArgs.Ids">
+            <summary>
+            Gets or sets the ids.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.GetCommonArgs">
+            <summary>
+            The common arguments for GET web service calls.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetCommonArgs.Fields">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.GetItemArgs">
+            <summary>
+            The arguments for getting a single item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.GetItemArgs.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.RelateArgs">
+            <summary>
+            The args class used for relating items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.RelateArgs.Id">
+            <summary>
+            Gets or sets the id of the item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.RelateArgs.RelatedItemId">
+            <summary>
+            Gets or sets the id of the related item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.RelateArgs.RelationName">
+            <summary>
+            Gets or sets the relation name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.RequestArgs">
+            <summary>
+            The request arguments for web service calls.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.RequestArgs.AdditionalHeaders">
+            <summary>
+            Gets or sets the additional headers for the request.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.RequestArgs.AdditionalQueryParams">
+            <summary>
+            Gets or sets the additional query parameters.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.UpdateArgs">
+            <summary>
+            The args class used for udpating items.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.UpdateArgs.Id">
+            <summary>
+            Gets or sets the id of the item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Batch.BatchingRestClient">
+            <summary>
+            The rest service implementation for callinsg Sitefinity OData APIs.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Batch.BatchingRestClient.#ctor(Progress.Sitefinity.RestSdk.Client.RestClient,Progress.Sitefinity.RestSdk.RequestArgs)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.RestClient"/> class.
+            </summary>
+            <param name="restClient">The source rest client. </param>
+            <param name="args">The additional args for the request. </param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Batch.BatchingRestClient.Execute">
+            <summary>
+            Executes the batch request.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Batch.IBatchingRestClient">
+            <summary>
+            An interface that is used to work with Sitefinity items.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Batch.IBatchingRestClient.Execute">
+            <summary>
+            Executes the batch request.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Batch.IBatchingRestClientExtensions">
+            <summary>
+            Extension methods for creating items in batches.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Batch.IBatchingRestClientExtensions.CreateItems``1(Progress.Sitefinity.RestSdk.IRestClient,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Batch creates the items.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="items">The items to create.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Batch.IBatchingRestClientExtensions.CreateItems``1(Progress.Sitefinity.RestSdk.IRestClient,System.Collections.Generic.IEnumerable{Progress.Sitefinity.RestSdk.CreateArgs})">
+            <summary>
+            Batch creates the items.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="argsList">The argument list of items to create.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.FileData">
+            <summary>
+            File data object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FileData.FileName">
+            <summary>
+            Gets or sets the file name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FileData.ContentType">
+            <summary>
+            Gets or sets the content type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FileData.FileStream">
+            <summary>
+            Gets or sets the file stream.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto">
+            <summary>
+            Form dto object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto.Title">
+            <summary>
+            Gets or sets the form title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto.Name">
+            <summary>
+            Gets or sets the form name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto.Renderer">
+            <summary>
+            Gets or sets the renderer.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto.TemplateName">
+            <summary>
+            Gets or sets the template name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormDto.Rules">
+            <summary>
+            Gets or sets the form rules.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionException">
+            <summary>
+            Form submission error.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionException"/> class.
+            </summary>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.SubmissionError">
+            <summary>
+            Form submission error.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.SubmissionError.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient">
+            <summary>
+            The default form submission client that sends form submissions to Sitefinity.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient"/> class.
+            </summary>
+            <param name="httpClient">The http client instance.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Progress.Sitefinity.RestSdk.Clients.Forms.FileData})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Progress.Sitefinity.RestSdk.Clients.Forms.FileData[]})">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionResult">
+            <summary>
+            Class holding information for the form submission result.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionResult.Success">
+            <summary>
+            Gets or sets a value indicating whether the submission is successfull.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionResult.Message">
+            <summary>
+            Gets or sets the success message.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionResult.RedirectUrl">
+            <summary>
+            Gets or sets the redirect url.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.IFormsClient">
+            <summary>
+            The contract for the operations with pages.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Forms.IFormSubmissionClient">
+            <summary>
+            The contract for the operations with pages.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.IFormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Client for form submission.
+            </summary>
+            <exception  cref="T:Progress.Sitefinity.RestSdk.Clients.Forms.FormSubmissionException">When a form submission fails (due to validation or other restrictions).</exception>
+            <param name="formName">The name of the form.</param>
+            <param name="formData">The form data to pass.></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.IFormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Progress.Sitefinity.RestSdk.Clients.Forms.FileData})">
+            <summary>
+            Client for form submission.
+            </summary>
+            <param name="formName">The name of the form.</param>
+            <param name="formData">The form data to pass.></param>
+            <param name="fileData">The file data to pass.></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Forms.IFormSubmissionClient.SubmitForm(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,Progress.Sitefinity.RestSdk.Clients.Forms.FileData[]})">
+            <summary>
+            Client for form submission.
+            </summary>
+            <param name="formName">The name of the form.</param>
+            <param name="formData">The form data to pass.></param>
+            <param name="fileData">The file data to pass.></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs">
+            <summary>
+            Args for adding a widget to the currently edited type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs.Name">
+            <summary>
+            Gets or sets the name of the widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs.SiblingKey">
+            <summary>
+            Gets or sets the name of the widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs.ParentPlaceholderKey">
+            <summary>
+            Gets or sets the parent placeholder key, which is the parent(layout) of the currently added widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs.PlaceholderName">
+            <summary>
+            Gets or sets the placeholder name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs.Properties">
+            <summary>
+            Gets or sets the properties of the widget.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.CategoryGroupDto">
+            <summary>
+            The section group.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.CategoryGroupDto.Name">
+            <summary>
+            Gets or sets the name of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.CategoryGroupDto.Sections">
+            <summary>
+            Gets or sets the Sections.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ControlMetadataDto">
+            <summary>
+            The control metadata.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ControlMetadataDto.Name">
+            <summary>
+            Gets or sets the name of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ControlMetadataDto.Caption">
+            <summary>
+            Gets or sets the caption of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ControlMetadataDto.PropertyMetadata">
+            <summary>
+            Gets or sets the proeprty metadata of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ControlMetadataDto.PropertyMetadataFlat">
+            <summary>
+            Gets or sets the proeprty metadata of the component.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto">
+            <summary>
+            The property container transfer object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.DefaultValue">
+            <summary>
+            Gets or sets the default property value for this type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.Title">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.Type">
+            <summary>
+            Gets or sets the type name of the property send to the backand.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.SectionName">
+            <summary>
+            Gets or sets the section name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.CategoryName">
+            <summary>
+            Gets or sets the category name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.Properties">
+            <summary>
+            Gets or sets the dynamic properties.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.PropertyMetadataContainerDto.TypeChildProperties">
+            <summary>
+            Gets or sets the child properties of the type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto">
+            <summary>
+            Gets or sets the section transfer object.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="title">The title.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="title">The title.</param>
+            <param name="categoryName">The category name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.Name">
+            <summary>
+            Gets or sets the name of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.Title">
+            <summary>
+            Gets or sets the title of the section.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.Properties">
+            <summary>
+            Gets or sets the Properties collecction.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SectionDto.CategoryName">
+            <summary>
+            Gets or sets the category name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs">
+            <summary>
+            Args for adding a widget to the currently edited type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs.Caption">
+            <summary>
+            Gets or sets the component caption.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs.ComponentId">
+            <summary>
+            Gets or sets the component id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs.PropertyLocalizationMode">
+            <summary>Gets or sets the property localization mode.</summary>
+            <value>The property localization mode - Default (if not specified), AllTranslations, CurrentTranslationOnly.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs.Properties">
+            <summary>
+            Gets or sets the properties of the widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs.PropertyMetadata">
+            <summary>Gets or sets the properties metadata.</summary>
+            <value>The properties metadata.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClient">
+            <summary>
+            The contract for the operations with the editor.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions">
+            <summary>
+            The contract for the operations with the editor.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.Lock``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem)">
+            <summary>
+            Locks the page.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.CreateWidget``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,Progress.Sitefinity.RestSdk.Clients.LayoutEditor.AddWidgetArgs)">
+            <summary>
+            Creates widget and adds it to page.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="addWidgetArgs">The widget content.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.SetWidgetProperties``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,Progress.Sitefinity.RestSdk.Clients.LayoutEditor.SetWidgetArgs)">
+            <summary>
+            Sets the widget properties.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="setWidgetArgs">The properties to set.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.DeleteWidget``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,System.String)">
+            <summary>
+            Deletes a widget.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="widgetId">The widget id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetHierarchicalModel``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,System.String)">
+            <summary>
+            Gets the widget model and its children.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="widgetId">The widget id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetModel``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem)">
+            <summary>
+            Gets the model.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetModelForEdit``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem)">
+            <summary>
+            Gets the model when the item is locked for editing.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetModel``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the model.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="query">The query params.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetProperties``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,System.String)">
+            <summary>
+            Gets the widget properties.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="componentId">The component id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.LayoutEditor.ILayoutEditorClientExtensions.GetComponentMetadata``1(``0,Progress.Sitefinity.RestSdk.Dto.SdkItem,System.String)">
+            <summary>
+            Gets the widget metadata.
+            </summary>
+            <param name="editorClient">The editor client.</param>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="componentId">The component id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo">
+            <summary>
+            Represents the SEO and Open Graph information for the page model.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.Title">
+            <summary>
+            Gets or sets the value for the SEO title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.Description">
+            <summary>
+            Gets or sets the value for the SEO description.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.HtmlInHeadTag">
+            <summary>
+            Gets or sets the value of any additional custom HTML that is to be placed in the head tag of the page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphTitle">
+            <summary>
+            Gets or sets the value for the Open Graph title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphDescription">
+            <summary>
+            Gets or sets the value for the Open Graph description.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphImage">
+            <summary>
+            Gets or sets the value for the Open Graph image.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphVideo">
+            <summary>
+            Gets or sets the value for the Open Graph video.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphType">
+            <summary>
+            Gets or sets the value for the Open Graph type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.OpenGraphSite">
+            <summary>
+            Gets or sets the value for the Open Graph site.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.MetaInfo.CanonicalUrl">
+            <summary>
+            Gets or sets the value of the canonical url for the page.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo">
+            <summary>
+            Represents the SEO and Open Graph information for the page model.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.DefaultCulture">
+            <summary>
+            Gets or sets the default culture.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.Cultures">
+            <summary>
+            Gets or sets the cultures.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.SiteInfo.IsSubFolder">
+            <summary>
+            Gets or sets a value indicating if the site is a sub folder.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.UserInfo">
+            <summary>
+            Represents the SEO and Open Graph information for the page model.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.UserInfo.Roles">
+            <summary>
+            Gets or sets the roles.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.UserInfo.AuthenticationProtocol">
+            <summary>
+            Gets or sets the authentication protocol.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.UserInfo.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.LayoutService.Dto.UserInfo.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto">
+            <summary>
+            Page node dto object.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.SdkItem"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.#ctor(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.SdkItem"/> class.
+            </summary>
+            <param name="dynamicFields">The dynamic fields holder.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.Renderer">
+            <summary>
+            Gets or sets the renderer.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.TemplateName">
+            <summary>
+            Gets or sets the template name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.TemplateId">
+            <summary>
+            Gets or sets the template id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.Title">
+            <summary>
+            Gets or sets the page title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.UrlName">
+            <summary>
+            Gets or sets the URL for the page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.OutputCacheProfile">
+            <summary>
+            Gets or sets the output cache profile.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.ShowInNavigation">
+            <summary>
+            Gets or sets if the page should be displayed in the navigation widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.ParentId">
+            <summary>
+            Gets or sets the parent ID.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.PageType">
+            <summary>
+            Gets or sets the node type.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.RedirectPage">
+            <summary>
+            Gets or sets the redirect page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.ViewUrl">
+            <summary>
+            Gets or sets the view url.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.HtmlTitle">
+            <summary>
+            Gets or sets the seo title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageNodeDto.IsHomePage">
+            <summary>
+            Gets or sets a value indicating whether this is the home page.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageTemplateDto">
+            <summary>
+            Dto class for working with the page template object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageTemplateDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageTemplateDto.TemplateName">
+            <summary>
+            Gets or sets the template name (for an external renderer).
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageTemplateDto.TemplateId">
+            <summary>
+            Gets or sets the template id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.PageTemplateDto.Renderer">
+            <summary>
+            Gets or sets the name of the renderer.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.RedirectPage">
+            <summary>
+            DTO class for holding information if the page is redirecting
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.RedirectPage.NodeId">
+            <summary>
+            Gets or sets the page node id this page redirects to.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.RedirectPage.ProviderName">
+            <summary>
+            Gets or sets the provider name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.RedirectPage.OpenInNewWindow">
+            <summary>
+            Gets or sets a value indicating whether the page is to be opened in a new window.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Pages.Dto.RedirectPage.RedirectUrl">
+            <summary>
+            Gets or sets the redirect URL.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient">
+            <summary>
+            The contract for the operations with pages.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient.ChangeTemplate(System.String,System.String,System.String)">
+            <summary>
+            Changes the template for the provided page.
+            </summary>
+            <param name="pageId">The page id.</param>
+            <param name="templateName">The template name.</param>
+            <param name="templateId">The template id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient.SyncPage(System.String,System.String)">
+            <summary>
+            Syncs the page.
+            </summary>
+            <param name="pageId">The page id.</param>
+            <param name="cultureName">The culture name</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient.SplitPage(System.String,System.String)">
+            <summary>
+            Splits the page.
+            </summary>
+            <param name="pageId">The page id.</param>
+            <param name="copyFromCulture">The culture to copy the page content from.--></param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient.SetHomePage(System.String)">
+            <summary>
+            Sets the home page.
+            </summary>
+            <param name="pageId">The id of the page.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient">
+            <inheritdoc cref="T:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient"/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient"/> class.
+            </summary>
+            <param name="service">The HTTP client factory.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient.ChangeTemplate(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient.SyncPage(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Pages.PagesClient.SplitPage(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto">
+            <summary>
+            Class that holds the site data.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.SiteMapRootNodeId">
+            <summary>
+            Gets or sets the sitemap root node id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.DefaultContentCulture">
+            <summary>
+            Gets or sets the default content culture.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.DefaultCultureKey">
+            <summary>
+            Gets or sets the default content culture.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.ContentCultures">
+            <summary>
+            Gets or sets the content cultures.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.CultureDto">
+            <summary>
+            Class containing the culture specifics.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.CultureDto.Name">
+            <summary>
+            Gets or sets the culture name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto.CultureDto.DisplayName">
+            <summary>
+            Gets or sets the culture display name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Sites.ISitesClient">
+            <summary>
+            Interface for working with site specific methods.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Sites.ISitesClient.GetCurrentSite">
+            <summary>
+            Method for retrieving the current site.
+            </summary>
+            <returns>The site object.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject">
+            <summary>
+            Class holding information for a given site.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.#ctor(Progress.Sitefinity.RestSdk.Clients.Sites.Dto.SiteDto)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject"/> class.
+            </summary>
+            <param name="dto">The siteDto from which to construct the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject"/> class.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.Id">
+            <summary>
+            Gets or sets the id of the site.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.DefaultCulture">
+            <summary>
+            Gets the default culture.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.Cultures">
+            <summary>
+            Gets all of the cultures.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.NonDefaultContentCultures">
+            <summary>
+            Gets the non default cultures.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.TimeZone">
+            <summary>
+            Gets or sets the timezone.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Sites.SiteObject.IsSubFolder">
+            <summary>
+            Gets or sets a value whether the site is a sub folder.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Sites.SitesClient">
+            <inheritdoc cref="T:Progress.Sitefinity.RestSdk.Clients.Sites.ISitesClient"/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Sites.SitesClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Sites.SitesClient"/> class.
+            </summary>
+            <param name="restClient">The rest client.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Sites.SitesClient.GetCurrentSite">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Templates.Dto.PageTemplateDto">
+            <summary>
+            Dto class for working with the page template object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Templates.Dto.PageTemplateDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Templates.Dto.PageTemplateDto.TemplateName">
+            <summary>
+            Gets or sets the template name (for an external renderer).
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Templates.Dto.PageTemplateDto.TemplateId">
+            <summary>
+            Gets or sets the template id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Templates.Dto.PageTemplateDto.Renderer">
+            <summary>
+            Gets or sets the name of the renderer.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Templates.ITemplatesClient">
+            <summary>
+            The contract for the operations with page templates.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Templates.ITemplatesClient.ChangeParentTemplate(System.String,System.String,System.String)">
+            <summary>
+            Changes the parent template for the provided page template.
+            </summary>
+            <param name="templateId">The template id.</param>
+            <param name="templateName">The template name.</param>
+            <param name="parentTemplateId">The parent template id.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Templates.TemplatesClient">
+            <inheritdoc cref="T:Progress.Sitefinity.RestSdk.Clients.Templates.ITemplatesClient"/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Templates.TemplatesClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Templates.TemplatesClient"/> class.
+            </summary>
+            <param name="service">The HTTP client factory.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Templates.TemplatesClient.ChangeParentTemplate(System.String,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Users.IUsersClient">
+            <summary>
+            Interface for working with user specific methods.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Users.IUsersClient.GetCurrentUser">
+            <summary>
+            Method for retrieving the current user.
+            </summary>
+            <returns>The site object.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto">
+            <summary>
+            User dto object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.IsAuthenticated">
+            <summary>
+            Gets or sets if the user is Authenticated.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.AuthenticationProtocol">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.Roles">
+            <summary>
+            Gets or sets the roles.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Clients.Users.Dto.UserDto.ExternalProviderName">
+            <summary>
+            Gets or sets the external provider name
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Clients.Users.UsersClient">
+            <summary>
+            Interface for working with site specific methods.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Users.UsersClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Users.UsersClient"/> class.
+            </summary>
+            <param name="restClient">The rest client.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Clients.Users.UsersClient.GetCurrentUser">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.CleanUpRestClient">
+            <summary>
+            The rest service implementation for calling Sitefinity OData APIs.
+            This service automatically deletes the items it has created. It can be used inside a using block.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.CleanUpRestClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.CleanUpRestClient"/> class.
+            </summary>
+            <param name="client">The rest client. </param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.CleanUpRestClient.CreateItem``1(Progress.Sitefinity.RestSdk.CreateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.CleanUpRestClient.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.Dto.Content.ContentItemDto">
+            <summary>
+            Represents the minimum properties of a Content Item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.Dto.Content.ContentItemDto.Title">
+            <summary>
+            Gets or sets the title of the content item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.Dto.Content.ContentItemDto.Content">
+            <summary>
+            Gets or sets the content of the content item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.RestClient">
+            <summary>
+            The rest service implementation for calling Sitefinity OData APIs.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.RestClient"/> class.
+            </summary>
+            <param name="httpClient">The http client. </param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.#ctor(System.Net.Http.HttpClient,Progress.Sitefinity.RestSdk.IServiceMetadata)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.RestClient"/> class.
+            </summary>
+            <param name="httpClient">The http client. </param>
+            <param name="metadata">The service metadata. </param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.#ctor(Progress.Sitefinity.RestSdk.Client.RestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.RestClient"/> class.
+            </summary>
+            <param name="source">The rest client. </param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.RestClient.RequestArgs">
+            <summary>
+            Gets the request args.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.RestClient.ServiceMetadata">
+            <summary>
+            Gets the service metadata object.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ClearCache">
+            <summary>
+            Clears the cache for the Rest Client.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.Init(Progress.Sitefinity.RestSdk.RequestArgs,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.Init(Progress.Sitefinity.RestSdk.RequestArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteBoundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteBoundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteBoundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteBoundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteUnboundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteUnboundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteUnboundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.ExecuteUnboundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.GetItem``1(Progress.Sitefinity.RestSdk.GetItemArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.CreateItem``1(Progress.Sitefinity.RestSdk.CreateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.DeleteItem(Progress.Sitefinity.RestSdk.DeleteArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.UpdateItem(Progress.Sitefinity.RestSdk.UpdateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.DeleteRelation(Progress.Sitefinity.RestSdk.DeleteRelationArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.RelateItem(Progress.Sitefinity.RestSdk.RelateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClient.GetItems``1(Progress.Sitefinity.RestSdk.GetAllArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.RestClientExtensionsTaxonomies">
+            <summary>
+            Extensions for the <see cref="T:Progress.Sitefinity.RestSdk.IRestClient"/> interface.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase">
+            <summary>
+            A proxy class to proxy the methods to an actual instance of a <see cref="T:Progress.Sitefinity.RestSdk.OData.IODataRestClient" />.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase"/> class.
+            </summary>
+            <param name="wrapped">The <see cref="T:Progress.Sitefinity.RestSdk.OData.IODataRestClient" /> to wrap.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.Init(Progress.Sitefinity.RestSdk.RequestArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.Init(Progress.Sitefinity.RestSdk.RequestArgs,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteBoundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteBoundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteBoundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteBoundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteUnboundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteUnboundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteUnboundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.ExecuteUnboundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.GetItem``1(Progress.Sitefinity.RestSdk.GetItemArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.CreateItem``1(Progress.Sitefinity.RestSdk.CreateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.DeleteItem(Progress.Sitefinity.RestSdk.DeleteArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.UpdateItem(Progress.Sitefinity.RestSdk.UpdateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.DeleteRelation(Progress.Sitefinity.RestSdk.DeleteRelationArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.RelateItem(Progress.Sitefinity.RestSdk.RelateArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.GetItems``1(Progress.Sitefinity.RestSdk.GetAllArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Client.RestClientProxyBase.GetWrappedClient">
+            <summary>
+            Gets the underlying rest client.
+            </summary>
+            <returns>The rest client.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Client.CollectionResponse`1">
+            <summary>
+            A collection response container.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.CollectionResponse`1.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Client.CollectionResponse`1.Items">
+            <summary>
+            Gets or sets the items.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.OrderBy">
+            <summary>
+            The order by clause.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OrderBy.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.OrderBy"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OrderBy.#ctor(System.String,Progress.Sitefinity.RestSdk.OrderType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.OrderBy"/> class.
+            </summary>
+            <param name="name">The name if the field, by which to order by.</param>
+            <param name="order">The order type.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.OrderBy.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.OrderBy.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OrderBy.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.OrderType">
+            <summary>
+            The order typ enum.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.OrderType.Ascending">
+            <summary>
+            Asceding order.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.OrderType.Descending">
+            <summary>
+            Descending order.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.Address">
+            <summary>
+            Class mapped to the address field.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.CountryCode">
+            <summary>
+            Gets or sets the country code.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.StateCode">
+            <summary>
+            Gets or sets the state code.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.City">
+            <summary>
+            Gets or sets the city.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.Zip">
+            <summary>
+            Gets or sets the zip code.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.Street">
+            <summary>
+            Gets or sets the street.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.Latitude">
+            <summary>
+            Gets or sets the latitude.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.Longitude">
+            <summary>
+            Gets or sets the longitude.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Address.MapZoomLevel">
+            <summary>
+            Gets or sets the map zoom level.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.AddressExtensions">
+            <summary>
+            Extension methods for the Media items.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.AddressExtensions.GetAddressString(Progress.Sitefinity.RestSdk.Dto.Address,System.String)">
+            <summary>
+            Gets the serialized address string. E.g. #=Street#, #=City#, #=State# #=Country#
+            </summary>
+            <param name="address">The address value.</param>
+            <param name="format">The format.</param>
+            <returns>The address string.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.AddressExtensions.GetAddressString(Progress.Sitefinity.RestSdk.Dto.SdkItem,System.String,System.String)">
+            <summary>
+            Gets the serialized address string. E.g. #=Street# #=City# #=State# #=Country#
+            </summary>
+            <param name="sdkItem">The sdk item.</param>
+            <param name="fieldName">The field name.</param>
+            <param name="format">The format.</param>
+            <returns>The address string.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute">
+            <summary>
+            Attribute for making types to be rerpresented as a specific client type
+            other than the ones that are basic value types.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute"/> class.
+            </summary>
+            <param name="type">The corresponding full type name of the Sitefinity class. </param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MappedSitefinityTypeAttribute.Type">
+            <summary>
+            Gets or sets the data type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.Content.BlogDto">
+            <summary>
+            Class mapped to the blog item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.Content.BlogPostDto">
+            <summary>
+            Class mapped to the blog post item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.Content.ContentWithParentDto">
+            <summary>
+            A class that has properties all content items that have parents in Sitefinity should have.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.Content.ContentWithParentDto.ParentId">
+            <summary>
+            Gets or sets the parent item Id.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.CalendarDto">
+            <summary>
+            Class mapped to the event item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.CalendarDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.CalendarDto.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.CategoryDto">
+            <summary>
+            The taxon class.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto">
+            <summary>
+            A base class that has properties all content item classes in Sitefinity should have.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.SystemSourceKey">
+            <summary>
+            Gets or sets the source key.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.PublicationDate">
+            <summary>
+            Gets or sets the publication date.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.DateCreated">
+            <summary>
+            Gets or sets the date of creation.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.UrlName">
+            <summary>
+            Gets or sets the url name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ContentBaseDto.ItemDefaultUrl">
+            <summary>
+            Gets or sets the item default url.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.DocumentDto">
+            <summary>
+            Class mapped to the image item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.EventDto">
+            <summary>
+            Class mapped to the event item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.EventDto.EventStart">
+            <summary>
+            Gets or sets the event start date and time.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.MediaDtoExtensions">
+            <summary>
+            Extension methods for the Media items.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.MediaDtoExtensions.GetThumbnail(Progress.Sitefinity.RestSdk.Dto.ImageDto,System.String)">
+            <summary>
+            Gets a thumbnail for the first item.
+            </summary>
+            <param name="mediaItem">The media item.</param>
+            <param name="thumbnailName">The thumnail name. If none - return the first thumbnail.</param>
+            <returns>The thumbnail.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.MediaDtoExtensions.GetThumbnail(Progress.Sitefinity.RestSdk.Dto.ImageDto)">
+            <summary>
+            Gets a thumbnail for the first item.
+            </summary>
+            <param name="mediaItem">The media item.</param>
+            <returns>The thumbnail.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ImageDto">
+            <summary>
+            Class mapped to the image item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ImageDto.AlternativeText">
+            <summary>
+            Gets or sets the alternative text.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ImageDto.Width">
+            <summary>
+            Gets or sets the width of the image.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ImageDto.Height">
+            <summary>
+            Gets or sets the height of the image.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ImageDto.Thumbnails">
+            <summary>
+            Gets or sets the thumbnals.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.LibraryDto">
+            <summary>
+            Class mapped to the library item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.LibraryDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.LibraryDto.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ListDto">
+            <summary>
+            Class mapped to the list class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ListDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ListItemDto">
+            <summary>
+            Class mapped to the list item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ListItemDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ListItemDto.ParentId">
+            <summary>
+            Gets or sets the parent item Id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ListItemDto.PublicationDate">
+            <summary>
+            Gets or sets the publication date.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ListItemDto.DateCreated">
+            <summary>
+            Gets or sets the date of creation.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.MediaDto">
+            <summary>
+            Class mapped to the media item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.ThumbnailUrl">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.Parent">
+            <summary>
+            Gets or sets the parent library.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.Url">
+            <summary>
+            Gets or sets the media URL.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.MimeType">
+            <summary>
+            Gets or sets mime type of the video.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.Extension">
+            <summary>
+            Gets or sets the file extension.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.TotalSize">
+            <summary>
+            Gets or sets the total size of the item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.FolderId">
+            <summary>
+            Gets or sets the folder id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.ParentId">
+            <summary>
+            Gets or sets the parent id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.IsDamMedia">
+            <summary>
+            Gets or sets the is dam media.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.MediaDto.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.NewsDto">
+            <summary>
+            Class mapped to the news item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.NewsDto.Summary">
+            <summary>
+            Gets or sets the summary.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.NewsDto.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.NewsDto.Tags">
+            <summary>
+            Gets or sets the tags.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.TagDto">
+            <summary>
+            The taxon class.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.TaxonDto">
+            <summary>
+            The taxon class.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonDto.TaxonomyId">
+            <summary>
+            Gets or sets the taxonomy id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonDto.AppliedTo">
+            <summary>
+            Gets or sets the count of the items that the current taxon is applied to.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonDto.UrlName">
+            <summary>
+            Gets or sets the url name of the taxon.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonDto.SubTaxa">
+            <summary>
+            Gets or sets the children taxa.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto">
+            <summary>
+            The taxonomy class.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto.TaxaUrl">
+            <summary>
+            Gets or sets the taxa url.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto.TaxonName">
+            <summary>
+            Gets or sets the taxon name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.TaxonomyDto.Type">
+            <summary>
+            Gets or sets the taxonomy type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.TaxonomyType">
+            <summary>
+            Enum representing the different taxonomy types.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Dto.TaxonomyType.Flat">
+            <summary>
+            Groups content into a controlled set of categories in single level.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Dto.TaxonomyType.Hierarchical">
+            <summary>
+            Groups content into two or more levels in tree structure.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto">
+            <summary>
+            The model for the thumbnail.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.Name">
+            <summary>
+            Gets or sets the thumbnail profile's name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.Title">
+            <summary>
+            Gets or sets the thumbnail profile's title.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.Url">
+            <summary>
+            Gets or sets the generated URL for this thumbnial profile.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.OriginalUrl">
+            <summary>
+            Gets or sets the original URL for the image.
+            </summary>
+            <value>The URL.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.Width">
+            <summary>
+            Gets or sets the width of the thumbnail. It's calculated in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.Height">
+            <summary>
+            Gets or sets the heigh of the thumbnail. It's calculated in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ThumbnailDto.MimeType">
+            <summary>
+            Gets or sets mime type of the thumbnail.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.VideoDto">
+            <summary>
+            Class mapped to the image item class in Sitefinity.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.VideoDto.Width">
+            <summary>
+            Gets or sets the width of the image.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.VideoDto.Height">
+            <summary>
+            Gets or sets the height of the image.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ISdkItem">
+            <summary>
+            Interface used to work with Sitefinity dto objects.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ISdkItem.Id">
+            <summary>
+            Gets the id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ISdkItem.Provider">
+            <summary>
+            Gets the provider name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ODataError">
+            <summary>
+            Class holding the odata error code format.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ODataError.Code">
+            <summary>
+            Gets or sets the error code.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ODataError.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ODataErrorWrapper">
+            <summary>
+            Class that wraps the odata error.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ODataErrorWrapper.Error">
+            <summary>
+            Gets or sets the error.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.ODataWrapper`1">
+            <summary>
+            Wraper for the responses of OData services.
+            </summary>
+            <typeparam name="T">The object type.</typeparam>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ODataWrapper`1.Value">
+            <summary>
+            Gets or sets the value of the response.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.ODataWrapper`1.TotalCount">
+            <summary>
+            Gets or sets the value of the response.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Dto.SdkItem">
+            <inheritdoc cref="T:Progress.Sitefinity.RestSdk.Dto.ISdkItem" />
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.SdkItem"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.#ctor(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.SdkItem"/> class.
+            </summary>
+            <param name="dynamicFields">The dynamic fields holder.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Dto.SdkItem"/> class.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="provider">The provider name.</param>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.SdkItem.Id">
+            <inheritdoc />
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Dto.SdkItem.Provider">
+            <inheritdoc />
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.SetValue``1(System.String,``0)">
+            <summary>
+            Sets a field to the item.
+            </summary>
+            <typeparam name="T">The type of the field.</typeparam>
+            <param name="fieldName">The name of the field.</param>
+            <param name="value">The value of the field.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.GetValue``1(System.String)">
+            <summary>
+            Gets a value from the item with the provided field name.
+            </summary>
+            <typeparam name="T">The type of the field.</typeparam>
+            <param name="fieldName">The name of the field.</param>
+            <returns>The value of the field.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Dto.SdkItem.TryGetValue``1(System.String,``0@)">
+            <summary>
+            Safely returns field value
+            </summary>
+            <typeparam name="T">The type of the value</typeparam>
+            <param name="fieldName">The field name.</param>
+            <param name="fieldValue">The field value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException">
+            <summary>
+            The exception constructed from the http service error.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.Code">
+            <summary>
+            Gets the error code.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException"/> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException"/> class.
+            </summary>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException"/> class.
+            </summary>
+            <param name="message">The error message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException"/> class.
+            </summary>
+            <param name="message">The error message.</param>
+            <param name="code">The code.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException.#ctor(Progress.Sitefinity.RestSdk.Dto.ODataErrorWrapper,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodeException"/> class.
+            </summary>
+            <param name="wrapper">The wrapped error.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodes">
+            <summary>
+            Class holding known error codes.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Exceptions.ErrorCodes.NotFound">
+            <summary>
+            The not found error code.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor">
+            <summary>
+            Class for parsing the expression tree to a sdk filter
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.#ctor(System.Linq.Expressions.Expression,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor" />
+            </summary>
+            <param name="expression">The expression.</param>
+            <param name="type">The clr type</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.#ctor(System.Linq.Expressions.LambdaExpression,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor" />
+            </summary>
+            <param name="expression">The expression.</param>
+            <param name="type">The clr type</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.GetFilter">
+            <summary>
+            Gets the filter object.
+            </summary>
+            <returns>The filter object.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.VisitUnary(System.Linq.Expressions.UnaryExpression)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.VisitMethodCall(System.Linq.Expressions.MethodCallExpression)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.VisitBinary(System.Linq.Expressions.BinaryExpression)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Expressions.SdkFilterExpressionVisitor.TryGetMemberFromExpression(System.Linq.Expressions.Expression,System.String@)">
+            <summary>
+            Attempts to get the member name from the expression.
+            </summary>
+            <param name="source">The source expression.</param>
+            <param name="memberName">The member name.</param>
+            <returns>If the extraction was successfull.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.CombinedFilter">
+            <summary>
+            Represents a class for combining multiple filters.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.LogicalOperators">
+            <summary>
+            Represents the operators for combining filters.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.LogicalOperators.And">
+            <summary>
+            The 'and' logical operator.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.LogicalOperators.Or">
+            <summary>
+            The 'or' logical operator.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.LogicalOperators.Not">
+            <summary>
+            The 'not' logical operator.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.Operator">
+            <summary>
+            Gets or sets the operator from <see cref="T:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.LogicalOperators"/>.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.CombinedFilter.ChildFilters">
+            <summary>
+            Gets or sets the child filters.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.DateOffsetPeriod">
+            <summary>
+            Defines offset period of time.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.DateOffsetPeriod.DateFieldName">
+            <summary>
+            Gets or sets the date field name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.DateOffsetPeriod.OffsetType">
+            <summary>
+            Gets or sets the offset type
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.DateOffsetPeriod.OffsetValue">
+            <summary>
+            Gets or sets the offset value.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.DateOffsetType">
+            <summary>
+            Defines available offset types for dates.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.DateOffsetType.Days">
+            <summary>
+            Days.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.DateOffsetType.Weeks">
+            <summary>
+            Weeks.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.DateOffsetType.Months">
+            <summary>
+            Months.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.DateOffsetType.Years">
+            <summary>
+            Years.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterClause">
+            <summary>
+            A class representing a filter clause.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators">
+            <summary>
+            Represents the available logical operators for the use with <see cref="T:Progress.Sitefinity.RestSdk.Filters.FilterClause"/>.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.Equal">
+            <summary>
+            The equal operator (==).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.NotEqual">
+            <summary>
+            The not equal operator (!=).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.GreaterThan">
+            <summary>
+            The greater than operator (>).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.LessThan">
+            <summary>
+            The less than operator (&lt;).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.GreaterThanOrEqual">
+            <summary>
+            The greater than or equal operator (>=).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.LessThanOrEqual">
+            <summary>
+            The less than or equal operator (&lt;=).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.ContainsOr">
+            <summary>
+            Collection operator for 'or' logic - (item1=val or item2=val or ..).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.ContainsAnd">
+            <summary>
+            Collection operator for 'and' logic - (item1=val and item2=val and ..).
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operators.DoesNotContain">
+            <summary>
+            Collection operator for inverted 'or' logic - not (item1=val or item2=val or ..).
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterClause.StringOperators">
+            <summary>
+            Represents the available string operators for performing filters on string properties.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.StringOperators.StartsWith">
+            <summary>
+            The startswith string operator.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.StringOperators.EndsWith">
+            <summary>
+            The endswith string operator.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterClause.StringOperators.Contains">
+            <summary>
+            The contains string operator.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.FilterClause.FieldName">
+            <summary>
+            Gets or sets the field name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.FilterClause.FieldValue">
+            <summary>
+            Gets or sets the field value.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.FilterClause.Operator">
+            <summary>
+            Gets or sets the operator.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterContext">
+            <summary>
+            Helper class for providing context.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.FilterContext.Filter">
+            <summary>
+            Gets or sets the filter.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.FilterContext.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterConverter">
+            <summary>
+            Helper class for converting filters.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterConverter.Types">
+            <summary>
+            The types of known filters.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterConverter.Types.Ids">
+            <summary>
+            The filter name for ids.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.FilterConverter.Types.Complex">
+            <summary>
+            The filter name for complex.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterConverter.From(System.Collections.Generic.KeyValuePair{System.String,System.String})">
+            <summary>
+            Helper method for converting a filter from a name and value.
+            </summary>
+            <param name="filter">The filter to be converted.</param>
+            <returns>The converted filter.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterConverter.From(System.Collections.Generic.IList{System.String})">
+            <summary>
+            Helper method for converting the <see cref="F:Progress.Sitefinity.RestSdk.Filters.FilterConverter.Types.Ids"/> filter from a name and value.
+            </summary>
+            <param name="itemIds">The item Ids to be converted.</param>
+            <returns>The converted filter.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase">
+            <summary>
+            Base class for serializing filters.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.Serialize(Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serialize the given filter from the filterContext.
+            </summary>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.SerializeFilterValue(System.Object,System.String,Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serializes the filter value.
+            </summary>
+            <param name="value">The value to serialize.</param>
+            <param name="propName">The property name.</param>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter value.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.SerializeFilterValuesAsArray(System.Object,System.String,Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serializes the filter value.
+            </summary>
+            <param name="value">The value to serialize.</param>
+            <param name="propName">The property name.</param>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter value.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.TrySerializeFilterValue(System.String,System.Object,Progress.Sitefinity.RestSdk.Filters.FilterContext,System.String@)">
+            <summary>
+            Attempts to serialize the given value.
+            </summary>
+            <param name="propName">The name of the property.</param>
+            <param name="value">The value.</param>
+            <param name="filterContext">The filter context.</param>
+            <param name="result">The resulting serialized value.</param>
+            <returns>True if the serialization was sucessfull, false otherwise.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.SerializeCombinedFilter(Progress.Sitefinity.RestSdk.Filters.CombinedFilter,System.Collections.Generic.List{System.String},Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serializes the <see cref="T:Progress.Sitefinity.RestSdk.Filters.CombinedFilter" /> object.
+            </summary>
+            <param name="filter">The filter to serialize.</param>
+            <param name="serializedChildFilters">The serialized child filters.</param>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.SerializeFilterClause(Progress.Sitefinity.RestSdk.Filters.FilterClause,Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serializes the <see cref="T:Progress.Sitefinity.RestSdk.Filters.FilterClause" /> object.
+            </summary>
+            <param name="clause">The filter to serialize.</param>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Filters.FilterSerializerBase.SerializeRelationFilter(Progress.Sitefinity.RestSdk.Filters.RelationFilter,Progress.Sitefinity.RestSdk.Filters.FilterContext)">
+            <summary>
+            Serializes the <see cref="T:Progress.Sitefinity.RestSdk.Filters.RelationFilter" /> object.
+            </summary>
+            <param name="filter">The filter to serialize.</param>
+            <param name="filterContext">The filter context.</param>
+            <returns>The serialized filter.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.RelationFilter">
+            <summary>
+            Represents a class for relation filters.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Filters.RelationFilter.LogicalOperators">
+            <summary>
+            Represents the operators for relation filters.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.RelationFilter.LogicalOperators.Any">
+            <summary>
+            The 'any' logical operator.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.Filters.RelationFilter.LogicalOperators.All">
+            <summary>
+            The 'all' logical operator.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.RelationFilter.Operator">
+            <summary>
+            Gets or sets the operator from <see cref="T:Progress.Sitefinity.RestSdk.Filters.RelationFilter.LogicalOperators"/>.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.RelationFilter.Name">
+            <summary>
+            Gets or sets the name of the relation.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Filters.RelationFilter.ChildFilter">
+            <summary>
+            Gets or sets the child filter.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Http.HttpResponseMessageExtensions">
+            <summary>
+            Helper methods for <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Http.HttpResponseMessageExtensions.ReadResponseAsync``1(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Reads and parses the response as json.
+            </summary>
+            <typeparam name="T">The type to which to convert.</typeparam>
+            <param name="httpResponseMessage">The httpResponseMessage from which to extract the resposne.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Http.HttpResponseMessageExtensions.ReadODataResponseAsync``1(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Reads and parses the response as json.
+            </summary>
+            <typeparam name="T">The type to which to convert.</typeparam>
+            <param name="httpResponseMessage">The httpResponseMessage from which to extract the resposne.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.IRestClient">
+            <summary>
+            An interface that is used to work with Sitefinity items.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.Init(Progress.Sitefinity.RestSdk.RequestArgs,System.Boolean)">
+            <summary>
+            Inits the client
+            </summary>
+            <param name="argsForEachRequest">Arguments to pass with each request.</param>
+            <param name="clearCache">Clears the cache.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.Init(Progress.Sitefinity.RestSdk.RequestArgs)">
+            <summary>
+            Inits the client
+            </summary>
+            <param name="argsForEachRequest">Arguments to pass with each request.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.GetItem``1(Progress.Sitefinity.RestSdk.GetItemArgs)">
+            <summary>
+            Gets a single item.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.CreateItem``1(Progress.Sitefinity.RestSdk.CreateArgs)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.DeleteItem(Progress.Sitefinity.RestSdk.DeleteArgs)">
+            <summary>
+            Deletes a single item.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.UpdateItem(Progress.Sitefinity.RestSdk.UpdateArgs)">
+            <summary>
+            Updates a single item.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.RelateItem(Progress.Sitefinity.RestSdk.RelateArgs)">
+            <summary>
+            Relates one item to another.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.DeleteRelation(Progress.Sitefinity.RestSdk.DeleteRelationArgs)">
+            <summary>
+            Removes related item(s).
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IRestClient.GetItems``1(Progress.Sitefinity.RestSdk.GetAllArgs)">
+            <summary>
+            Gets a collection of items.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Management.ScheduleArgs">
+            <summary>
+            The arguments for executing an operation.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Management.ScheduleArgs.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Management.ScheduleArgs.PublicationDate">
+            <summary>
+            Gets or sets the publication date.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.RestSdk.Management.ScheduleArgs.ExpirationDate">
+            <summary>
+            Gets or sets the unpublish date.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions">
+            <summary>
+            Extensions for the <see cref="T:Progress.Sitefinity.RestSdk.IRestClient"/> interface.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.ExecuteItemOperation(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes an operation for the provided item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.ExecuteItemOperationInternal(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes an operation for the provided item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.ScheduleItem(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.Management.ScheduleArgs)">
+            <summary>
+            Schedules the item for publishing and/or unpublishing. If the Publishing date is set
+            in the past, the item's publishing date is only updated.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.ScheduleItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,Progress.Sitefinity.RestSdk.Management.ScheduleArgs)">
+            <summary>
+            Schedules the item for publishing and/or unpublishing. If the Publishing date is set
+            in the past, the item's publishing date is only updated.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.SaveDraft(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Saves the item as draft.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.SaveDraft``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Saves the item as draft.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.SaveDraft``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Saves the item as draft in the provided culture.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture in which to publish the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.PublishItem(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Publishes the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.PublishItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Publishes the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.PublishItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Publishes the item in the provided culture.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture in which to publish the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.UnpublishItem(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Unpublishes the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.UnpublishItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Unpublishes the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.UnpublishItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Unpublishes the item in the provided culture.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture in which to publish the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.LockItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Locks the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.LockItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Locks the item in the provided culture.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture in which to publish the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.LockItem(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Locks the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.EditItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Update the item while item is locked and keeps it locked.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.EditItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Update the item while item is locked and keeps it locked in the provided culture.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture in which to publish the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.EditItem(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Update the item while item is locked and keeps it locked.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.GetPreviewUrl``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Gets the preview url of the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.Management.ItemManagementExtensions.GetPreviewUrl``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Gets the preview url of the item.
+            </summary>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="cultureName">The culture name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.OData.IODataRestClient">
+            <summary>
+            An interface that is used to work with Sitefinity items.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteBoundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Executes a bound function.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteBoundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Executes an unbound function.
+            </summary>
+            <typeparam name="T">The type of the return result.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task with the function result.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteUnboundFunction(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Executes a bound function.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteUnboundFunction``1(Progress.Sitefinity.RestSdk.BoundFunctionArgs)">
+            <summary>
+            Executes an unbound function.
+            </summary>
+            <typeparam name="T">The type of the return result.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task with the function result.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteBoundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes a bound action.
+            </summary>
+            <typeparam name="T">The type of the return result.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task with the action result.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteBoundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes a bound action.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteUnboundAction``1(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes a bound action.
+            </summary>
+            <typeparam name="T">The type of the return result.</typeparam>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task with the action result.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.IODataRestClient.ExecuteUnboundAction(Progress.Sitefinity.RestSdk.BoundActionArgs)">
+            <summary>
+            Executes a bound action.
+            </summary>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>The task.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata">
+            <summary>
+            Inteface for retrieving metadata for the service from a json based url.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.#ctor(Newtonsoft.Json.Linq.JObject,Progress.Sitefinity.RestSdk.Dto.TaxonomyDto[])">
+             <summary>
+            
+             </summary>
+             <param name="model">The meta model.</param>
+             <param name="taxonomies">The taxonomies.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetRelatedTypeEntitySet(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.TrySerializeFilterValue(System.String,System.String,System.Object,System.String@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetSimpleFields(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetRelatedFields(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetTaxonomyFieldName(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.ContainsField(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetRelatedTypeEntitySet(Newtonsoft.Json.Linq.JObject,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetSetNameFromType(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetModuleDisplayName(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetTaxonomyName(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetTaxonomies">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.IsPropertyACollection(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetParentType(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.OData.JsonServiceMetadata.GetChildTypes(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.IServiceMetadata">
+            <summary>
+            Inteface for retrieving metadata for the service.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.TrySerializeFilterValue(System.String,System.String,System.Object,System.String@)">
+            <summary>
+            Attempts to serialize the given value using the metadata provided.
+            </summary>
+            <param name="type">The type (entityset) of the item.</param>
+            <param name="propName">The property name for the value to serialize.</param>
+            <param name="value">The value to serialize.</param>
+            <param name="serialized">The serialzied value.</param>
+            <returns>If the serialization was successfull.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetRelatedTypeEntitySet(System.String,System.String)">
+            <summary>
+            Gets the related entityset from the main entity set given a relation name.
+            </summary>
+            <param name="typeEntitySet">The main entity set.</param>
+            <param name="relationName">The name of the relation.</param>
+            <returns>The related entity set.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetSimpleFields(System.String)">
+            <summary>
+            Gets the simple fields of the provided type.
+            </summary>
+            <param name="typeEntitySet">The main entity set.</param>
+            <returns>The simple fields.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetRelatedFields(System.String)">
+            <summary>
+            Gets the related fields of the provided type.
+            </summary>
+            <param name="typeEntitySet">The main entity set.</param>
+            <returns>The related fields.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetTaxonomyFieldName(System.String,System.String)">
+            <summary>
+            Gets the name of the taxonomy field by a proviced short tahonomy name.
+            </summary>
+            <param name="typeEntitySet">The main entity set.</param>
+            <param name="taxonomyName">The name of the taxonomy.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.ContainsField(System.String,System.String)">
+            <summary>
+            Returns whether the field is contained in the provided type.
+            </summary>
+            <param name="typeFullName">The full clr type name.</param>
+            <param name="fiedName">The field name.</param>
+            <returns>Whether the field is contained.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetSetNameFromType(System.String)">
+            <summary>
+            Gets the set name from the clr type name.
+            </summary>
+            <param name="typeFullName">The full clr type name.</param>
+            <returns>The entity set name.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetModuleDisplayName(System.String)">
+            <summary>
+            Gets the module display name given the full type name.
+            </summary>
+            <param name="typeFullName">The full type name.</param>
+            <returns>The module display name.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetTaxonomyName(System.String,System.String)">
+            <summary>
+            Gets the main short text field of the type.
+            </summary>
+            <param name="typeFullName">The full type name.</param>
+            <param name="fieldName">Field Name</param>
+            <returns>The main field name.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetTaxonomies">
+            <summary>
+            Gets the taxonomies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.IsPropertyACollection(System.String,System.String)">
+            <summary>
+            Checks whether a property is a collection.
+            </summary>
+            <param name="type">The type (entityset) of the item.</param>
+            <param name="propName">The property name.</param>
+            <returns>A value indicating whether that property is a collection or not</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetParentType(System.String)">
+            <summary>
+            Gets the parent type of the type.
+            </summary>
+            <param name="typeFullName">The full type name.</param>
+            <returns>The parent type.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.IServiceMetadata.GetChildTypes(System.String)">
+            <summary>
+            Gets all child types of the type not limiting to first generation.
+            </summary>
+            <param name="typeFullName">The full type name.</param>
+            <returns>Child types.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.MetadataInitializer">
+            <summary>
+            Class for initializing the <see cref="T:Progress.Sitefinity.RestSdk.IServiceMetadata" /> class.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.MetadataInitializer.Init(System.Net.Http.HttpClient,Progress.Sitefinity.RestSdk.RequestArgs)">
+            <summary>
+            Initializes the class.
+            </summary>
+            <param name="httpClient">The http client.</param>
+            <param name="requestArgs">The request args.</param>
+            <returns>The initialized service metadata.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.QueryParamNames">
+            <summary>
+            Class containing constants for the Sitefinity Rest API.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.QueryParamNames.Provider">
+            <summary>
+            The provider query param name constant.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.QueryParamNames.Site">
+            <summary>
+            The site query param name constant.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.QueryParamNames.SiteTempFlag">
+            <summary>
+            The site temp flag name constant.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.QueryParamNames.Culture">
+            <summary>
+            The culture query param name constant.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.QueryParamNames.FallbackPropNames">
+            <summary>
+            Fallback property names query parameter name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.RestClientContentTypes">
+            <summary>
+            Class holding the known content types from Sitefinity.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.News">
+            <summary>
+            The news content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Sites">
+            <summary>
+            The sites content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Pages">
+            <summary>
+            The pages content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Forms">
+            <summary>
+            The forms content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.PageTemplates">
+            <summary>
+            The page templates content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Tags">
+            <summary>
+            The reference name for Tags.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Categories">
+            <summary>
+            The reference name for categories.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Taxonomies">
+            <summary>
+            The reference name for taxonomies.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Images">
+            <summary>
+            The images content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Videos">
+            <summary>
+            The videos content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Documents">
+            <summary>
+            The documents content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.BlogPost">
+            <summary>
+            The blog post content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Blogs">
+            <summary>
+            The blogs content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Events">
+            <summary>
+            The events content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Calendars">
+            <summary>
+            The calendars content type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.GenericContent">
+            <summary>
+            The content block type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.ListItems">
+            <summary>
+            The list items type CLR name.
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.RestSdk.RestClientContentTypes.Lists">
+            <summary>
+            The lists type CLR name.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientContentTypes.GetTaxonType(System.String)">
+            <summary>
+            Gets the taxon type.
+            </summary>
+            <param name="taxonomyName">The taxonomy name.</param>
+            <returns>The taxon type.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.RestClientExtensions">
+            <summary>
+            Extensions for the <see cref="T:Progress.Sitefinity.RestSdk.IRestClient"/> interface.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItemsByIds``1(Progress.Sitefinity.RestSdk.IRestClient,System.String[])">
+            <summary>
+            Gets a collection of items.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="ids">The item ids.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItemsByIds``1(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.GetByIdsArgs)">
+            <summary>
+            Gets a collection of items.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="args">The arguments to be passed to the service.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItems``1(Progress.Sitefinity.RestSdk.IRestClient,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Gets the first 50 items that matches the filter
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="expression">The LINQ expression to pass as a filter.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItems``1(Progress.Sitefinity.RestSdk.IRestClient,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},Progress.Sitefinity.RestSdk.GetAllArgs)">
+            <summary>
+            Gets the first 50 items that matches the filter
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="expression">The LINQ expression to pass as a filter.</param>
+            <param name="args">The LINQ expression to pass as a filter.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.CreateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.CreateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="providerName">The item dto.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItem``1(Progress.Sitefinity.RestSdk.IRestClient,System.String)">
+            <summary>
+            Gets a single item.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="id">The id of the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItem``1(Progress.Sitefinity.RestSdk.IRestClient,System.String,System.String)">
+            <summary>
+            Gets a single item.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="id">The id of the item.</param>
+            <param name="provider">The provider of the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.GetItem``1(Progress.Sitefinity.RestSdk.IRestClient,System.String,System.String,System.String)">
+            <summary>
+            Gets a single item.
+            </summary>
+            <typeparam name="T">The type of the item.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="id">The id of the item.</param>
+            <param name="provider">The provider of the item.</param>
+            <param name="culture">The culture, in which to get the item.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.CreateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String,System.String)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="providerName">The item dto.</param>
+            <param name="cultureName">The culture name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.RefreshItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Fetches the item again with the latest data.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.RefreshItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Fetches the item again with the latest data.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="cultureName">The culture name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.UpdateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Updates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.UpdateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Updates a single item in the provided culture.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="cultureName">The culture name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.DeleteItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0)">
+            <summary>
+            Deletes a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.DeleteItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Deletes a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="cultureName">The culture name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.RelateItem``1(Progress.Sitefinity.RestSdk.IRestClient,``0,Progress.Sitefinity.RestSdk.Dto.ISdkItem,System.String)">
+            <summary>
+            Relates one item to another.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="relatedItem">The related item dto.</param>
+            <param name="relationName">The relation name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.DeleteRelation``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Removes the related item(s).
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="relationName">The relation name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.DeleteRelation``1(Progress.Sitefinity.RestSdk.IRestClient,``0,Progress.Sitefinity.RestSdk.Dto.ISdkItem,System.String)">
+            <summary>
+            Removes related item(s).
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item dto.</param>
+            <param name="relatedItem">The related item dto.</param>
+            <param name="relationName">The relation name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.LoadTaxa``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String)">
+            <summary>
+            Loads the taxa.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="taxaFieldName">The field name containing the taxa ids.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientExtensions.LoadTaxa``1(Progress.Sitefinity.RestSdk.IRestClient,``0,System.String,System.String)">
+            <summary>
+            Loads the taxa.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="restClient">The rest client.</param>
+            <param name="item">The item.</param>
+            <param name="taxaFieldName">The field name containing the taxa ids.</param>
+            <param name="taxonomyName">The name of the taxonomy.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.RestSdk.RestClientsExtensions">
+            <summary>
+            Extensions for the <see cref="T:Progress.Sitefinity.RestSdk.IRestClient"/> interface.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Taxa(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.Clients.Taxa.ITaxaClient" /> that holds the page specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The taxa client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Pages(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Pages.IPagesClient" /> that holds the page specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The pages client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Templates(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Templates.ITemplatesClient" /> that holds the page templates specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The page templates client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Forms(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Forms.IFormsClient" /> that holds the page specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The forms client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Sites(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Sites.ISitesClient" /> that holds the site specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The sites client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.Users(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.RestSdk.Clients.Users.IUsersClient" /> that holds the user specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The users client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.LayoutService(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Gets the <see cref="T:Progress.Sitefinity.Clients.LayoutService.ILayoutServiceClient" /> that holds the layout service specific methods.
+            </summary>
+            <param name="client">The rest client.</param>
+            <returns>The layout service client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.StartBatch(Progress.Sitefinity.RestSdk.IRestClient)">
+            <summary>
+            Starts a batch request client.
+            </summary>
+            <param name="client">The source client.</param>
+            <returns>The batch service client.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.RestSdk.RestClientsExtensions.StartBatch(Progress.Sitefinity.RestSdk.IRestClient,Progress.Sitefinity.RestSdk.RequestArgs)">
+            <summary>
+            Starts a batch request client.
+            </summary>
+            <param name="client">The source client.</param>
+            <param name="args">The arguments to be included in each request - headers, query params.</param>
+            <returns>The batch service client.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentContext">
+            <summary>
+            The component context.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentContext.HasLazyComponents">
+            <summary>
+            Gets or sets a value indicating whether there are lazy components.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentContext.Components">
+            <summary>
+            Gets or sets the components.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentContext.OrphanedControls">
+            <summary>
+            Gets or sets the orphans.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto">
+            <summary>
+            The comonent transfer object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Id">
+            <summary>
+            Gets or sets the ID of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Name">
+            <summary>
+            Gets or sets the name of the component.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.SiblingId">
+            <summary>
+            Gets or sets the ID of the sibling.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.PlaceHolder">
+            <summary>
+            Gets or sets the placeholder.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.ViewName">
+            <summary>
+            Gets or sets the view name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Lazy">
+            <summary>
+            Gets or sets a value indicating whether the component should be loaded lazy.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Properties">
+            <summary>
+            Gets or sets the properties.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Children">
+            <summary>
+            Gets or sets the childern collection.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ComponentDto.Caption">
+            <summary>
+            Gets or sets the caption.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.LazyComponentsResponse">
+            <summary>
+            The response for the lazy components.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.LazyComponentsResponse.Components">
+            <summary>
+            Gets or sets the components.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto">
+            <summary>
+            The page data transfer object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Id">
+            <summary>
+            Gets or sets the ID of the page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Culture">
+            <summary>
+            Gets or sets the culture of the page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.SiteId">
+            <summary>
+            Gets or sets the site ID.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.TemplateName">
+            <summary>
+            Gets or sets the template name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Renderer">
+            <summary>
+            Gets or sets the renderer.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.ComponentContext">
+            <summary>
+            Gets or sets the component context.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Scripts">
+            <summary>
+            Gets or sets scripts for the page object.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.UrlParameters">
+            <summary>
+            Gets the additional url parameters when the page was resolved.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.DetailItem">
+            <summary>
+            Gets the resolved detail item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.MetaInfo">
+            <summary>
+            Gets the head metadata.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.MetadataHash">
+            <summary>
+            Gets or sets the metadata cache.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Fields">
+            <summary>
+            Gets or sets the fields.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.Site">
+            <summary>
+            Gets or sets the site.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageModelDto.User">
+            <summary>
+            Gets or sets the user.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PageDtoWithDynamicFields">
+            <summary>
+            Class for holding the page dynamic object with its custom fields.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageDtoWithDynamicFields.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageDtoWithDynamicFields.ViewUrl">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.Dto.PageDtoWithDynamicFields.GetPageNodeDto">
+            <summary>
+            Gets a page node dto object from the current object.
+            </summary>
+            <returns>The page node dto object.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript">
+            <summary>
+            The scripts for page data transfer object
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript.Source">
+            <summary>
+            Gets or sets source value for the script.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript.Attributes">
+            <summary>
+            Gets or sets the html element attributes.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript.Value">
+            <summary>
+            Gets or sets arguments for this script (for example: json data)
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PageScript.IsNoScript">
+            <summary>
+            Gets or sets a value indicating whether it is a noscript tag.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PageScriptLocation">
+            <summary>
+            The page script location
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Clients.LayoutService.Dto.PageScriptLocation.BodyTop">
+            <summary>
+            Top body tag location
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Clients.LayoutService.Dto.PageScriptLocation.BodyBottom">
+            <summary>
+            Bottom body tag location
+            </summary>
+        </member>
+        <member name="F:Progress.Sitefinity.Clients.LayoutService.Dto.PageScriptLocation.Head">
+            <summary>
+            Head tag location
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.ResolvedDetailItem">
+            <summary>
+            The detail item resolved from the additional parameters (segments)
+            when requesting the page.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ResolvedDetailItem.Id">
+            <summary>
+            Gets or sets the id of the detail item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ResolvedDetailItem.ProviderName">
+            <summary>
+            Gets or sets the provider name of the detail item.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.ResolvedDetailItem.ItemType">
+            <summary>
+            Gets or sets the type of the detail item.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueContainerDto">
+            <summary>
+            The property value container for the proeprties of the widgets.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueContainerDto.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueContainerDto.Value">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer">
+            <summary>
+            The property value group.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer.ComponentId">
+            <summary>Gets or sets the property localization mode.</summary>
+            <value>The property localization mode.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer.Caption">
+            <summary>
+            Gets or sets the widget caption.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer.PropertyLocalizationMode">
+            <summary>Gets or sets the property localization mode.</summary>
+            <value>The property localization mode.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer.Properties">
+            <summary>Gets or sets the properties.</summary>
+            <value>The properties.</value>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainer.PropertyMetadata">
+            <summary>Gets or sets the properties metadata.</summary>
+            <value>The properties metadata.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainerDto">
+            <summary>
+            The property value group DTO.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.PropertyValueGroupContainerDto.propertyValueGroup">
+            <summary>Gets or sets the wrapper element for the property value group.</summary>
+            <value>The property localization mode.</value>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState">
+            <summary>
+            A class holding the current state of the widget.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState.Key">
+            <summary>
+            Gets or sets the widget key.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState.Name">
+            <summary>
+            Gets or sets the widget name.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState.AddChildAllowed">
+            <summary>
+            Gets or sets a value indicating whether adding children is allowed.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState.EditAllowed">
+            <summary>
+            Gets or sets a value indicating whether edit is allowed.
+            </summary>
+        </member>
+        <member name="P:Progress.Sitefinity.Clients.LayoutService.Dto.WidgetState.MoveAllowed">
+            <summary>
+            Gets or sets a value indicating whether move is allowed.
+            </summary>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.ILayoutServiceClient">
+            <summary>
+            The service for the pages.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.ILayoutServiceClient.GetLazyComponents(System.String)">
+            <summary>
+            Gets the lazy components.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>The Lazy component response.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.ILayoutServiceClient.GetPageModel(System.String)">
+            <summary>
+            Gets the page model.
+            </summary>
+            <param name="url">The URL.</param>
+            <returns>The page model.</returns>
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.LayoutService.LayoutServiceClient">
+            <inheritdoc cref="T:Progress.Sitefinity.Clients.LayoutService.ILayoutServiceClient"/>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.LayoutServiceClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Clients.LayoutService.LayoutServiceClient"/> class.
+            </summary>
+            <param name="service">The rest client.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.LayoutServiceClient.GetLazyComponents(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.LayoutService.LayoutServiceClient.GetPageModel(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="T:Progress.Sitefinity.Clients.Taxa.ITaxaClient">
+            <summary>
+            The service for the taxa.
+            </summary>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.Taxa.ITaxaClient.CreateTaxon``1(``0,System.String)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="item">The item dto.</param>
+            <param name="taxonomyName">The taxonomy name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.Taxa.TaxaClient.#ctor(Progress.Sitefinity.RestSdk.OData.IODataRestClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Progress.Sitefinity.Clients.Taxa.TaxaClient"/> class.
+            </summary>
+            <param name="restClient">The rest client.</param>
+        </member>
+        <member name="M:Progress.Sitefinity.Clients.Taxa.TaxaClient.CreateTaxon``1(``0,System.String)">
+            <summary>
+            Creates a single item.
+            </summary>
+            <typeparam name="T">The type of the item to create.</typeparam>
+            <param name="item">The item dto.</param>
+            <param name="taxonomyName">The taxonomy name.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the result of the asynchronous operation.</returns>
+        </member>
+    </members>
+</doc>

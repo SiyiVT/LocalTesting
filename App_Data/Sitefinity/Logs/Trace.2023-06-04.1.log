@@ -1,0 +1,70 @@
+----------------------------------------
+Timestamp: 6/3/2023 12:01:04 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/3/2023 12:01:04 PM. End time: 6/3/2023 12:01:04 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 4:00:02 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationSyncTask'. Start time: 6/3/2023 4:00:02 PM. End time: 6/3/2023 4:00:02 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 4:00:03 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Authentication.Data.TransientDataCleanupTask'. Start time: 6/3/2023 4:00:03 PM. End time: 6/3/2023 4:00:03 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 4:00:03 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ExternalNotifications.ExternalNotificationsRetrieverTask'. Start time: 6/3/2023 4:00:03 PM. End time: 6/3/2023 4:00:03 PM. Task data: '{}'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 4:00:03 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Services.Notifications.Scheduling.NotificationsCleanupTask'. Start time: 6/3/2023 4:00:03 PM. End time: 6/3/2023 4:00:03 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 4:00:09 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.Translations.Synchronization.TranslationImportTask'. Start time: 6/3/2023 4:00:09 PM. End time: 6/3/2023 4:00:09 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/3/2023 6:01:01 PM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/3/2023 6:01:01 PM. End time: 6/3/2023 6:01:01 PM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2023 12:00:04 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ExternalNotifications.ExternalNotificationsRetrieverTask'. Start time: 6/4/2023 12:00:04 AM. End time: 6/4/2023 12:00:04 AM. Task data: '{}'
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2023 4:01:04 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/4/2023 4:01:04 AM. End time: 6/4/2023 4:01:04 AM. Task data: ''
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/4/2023 6:01:07 AM
+
+Message: Scheduler: Task executed: 'Telerik.Sitefinity.ABTesting.Scheduling.ABTestsSyncTask'. Start time: 6/4/2023 6:01:07 AM. End time: 6/4/2023 6:01:07 AM. Task data: ''
+
+
+----------------------------------------

@@ -1,0 +1,392 @@
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/15/2023 6:26:27 AM
+
+Message: HandlingInstanceID: 8f7f8634-d1b0-4597-a068-fdf8f4e62b7f
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/15/2023 06:26:27
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN1MDWK00002R
+TimeStamp : 6/15/2023 6:26:27 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/578f186e-8b1d-4bd2-81c2-cd40a20a2c08/appointments/45bfb6***********6-8fe5-7468f32b7150/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN1MDWK00002R
+
+App Domain: /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+
+ProcessId: 6796
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6412
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/15/2023 10:42:12 AM
+
+Message: HandlingInstanceID: 63fac550-c2c2-4316-ac30-73c355dfc324
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/15/2023 10:42:12
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN1MDWK00002R
+TimeStamp : 6/15/2023 10:42:12 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/enquiries/ae1a95f5-551c-4466-ba90-d1fd728a1a70/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN1MDWK00002R
+
+App Domain: /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+
+ProcessId: 6796
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:9012
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/15/2023 11:12:31 AM
+
+Message: HandlingInstanceID: 138ffc6b-618b-4741-b654-38bb673cb7ad
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/15/2023 11:12:31
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN1MDWK00002R
+TimeStamp : 6/15/2023 11:12:31 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/enquiries/e7793cba-5531-4311-a99d-2488a19899c0/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN1MDWK00002R
+
+App Domain: /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+
+ProcessId: 6796
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:6584
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/15/2023 11:41:05 AM
+
+Message: HandlingInstanceID: 49a37bbf-fbcc-441f-a9f8-fe446cfbae39
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/15/2023 11:41:05
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN1MDWK00002R
+TimeStamp : 6/15/2023 11:41:05 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/enquiries/c******6-49de-4397-8ab9-9878a503e8a7/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN1MDWK00002R
+
+App Domain: /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+
+ProcessId: 6796
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8364
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/15/2023 11:49:17 AM
+
+Message: HandlingInstanceID: 01d17847-cf0e-4c72-a923-873e3124ad6d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/15/2023 11:49:17
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN1MDWK00002R
+TimeStamp : 6/15/2023 11:49:17 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/enquiries/c******6-49de-4397-8ab9-9878a503e8a7/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN1MDWK00002R
+
+App Domain: /LM/W3SVC/2019185342/ROOT-10-133304940943918286
+
+ProcessId: 6796
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:3420
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/16/2023 2:09:49 AM
+
+Message: HandlingInstanceID: 346d3e62-8380-43f8-891c-19be0fd3ea10
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/16/2023 02:09:49
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN0MDWK000070
+TimeStamp : 6/16/2023 2:09:49 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-1-133313179260603060
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/enquiries/c******6-49de-4397-8ab9-9878a503e8a7/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN0MDWK000070
+
+App Domain: /LM/W3SVC/2019185342/ROOT-1-133313179260603060
+
+ProcessId: 1608
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:2736
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+ActivityId: 00000000-0000-0000-0000-000000000000
+
+Timestamp: 6/16/2023 2:50:12 AM
+
+Message: HandlingInstanceID: 615e7cf6-9c55-489b-be73-81753b4d3c5d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/16/2023 02:50:12
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : A potentially dangerous Request.Path value was detected from the client (*).
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ValidateInputIfRequiredByConfig()
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpRequest.ValidateInputIfRequiredByConfig()
+   at System.Web.HttpApplication.PipelineStepManager.ValidateHelper(HttpContext context)
+
+Additional Info:
+
+MachineName : WN0MDWK000070
+TimeStamp : 6/16/2023 2:50:12 AM
+FullName : Telerik.Sitefinity.Utilities, Version=14.3.8000.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2019185342/ROOT-1-133313179260603060
+ThreadIdentity : 
+WindowsIdentity : IIS APPPOOL\MYG03MWS013
+Requested URL : https://www.ihhmalaysia-international.com/Sitefinity/adminapp/content/hospitals/0***********0-0*************00000000/appointments/185e8b1d-a86e-4dd1-a3ab-4517ffe4d910/edit?sf_provider=IHHDynamicModuleProvider&sf_culture=en
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: WN0MDWK000070
+
+App Domain: /LM/W3SVC/2019185342/ROOT-1-133313179260603060
+
+ProcessId: 1608
+
+Process Name: C:\Windows\SysWOW64\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:4700
+
+Extended Properties: 
+----------------------------------------

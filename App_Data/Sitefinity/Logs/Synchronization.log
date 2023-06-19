@@ -1,0 +1,21 @@
+----------------------------------------
+[6/13/2023 7:09:34 AM] Importing item: Title - 'health-pulse-athletes-foot-banner', Type - 'System.IO.Stream', Id - d2449655-6da5-43a3-9b5d-ef62e2ab2b20, Action - New
+----------------------------------------
+----------------------------------------
+[6/13/2023 7:09:34 AM] Successfully uploaded a blob with file id 'd2449655-6da5-43a3-9b5d-ef62e2ab2b20' and provider 'FileSystem', belonging to media content with id '00000000-0000-0000-0000-000000000000' and provider 'OpenAccessDataProvider'
+----------------------------------------
+----------------------------------------
+[6/13/2023 7:09:34 AM] Imported an item in language 'en'.
+Item information: id = 'd2449655-6da5-43a3-9b5d-ef62e2ab2b20'; type = 'System.IO.Stream'; provider = 'OpenAccessDataProvider'; action = 'New'
+----------------------------------------
+----------------------------------------
+[6/13/2023 7:09:35 AM] Importing item: Title - 'health-pulse-athletes-foot-banner', Type - 'Telerik.Sitefinity.Libraries.Model.Image', Id - fdd5f124-13e0-4f01-932a-c3b03a96023c, Action - New
+----------------------------------------
+----------------------------------------
+[6/13/2023 7:09:35 AM] Imported an item in language 'en'.
+Item information: id = 'fdd5f124-13e0-4f01-932a-c3b03a96023c'; type = 'Telerik.Sitefinity.Libraries.Model.Image'; provider = 'OpenAccessDataProvider'; action = 'New'
+----------------------------------------
+----------------------------------------
+[6/13/2023 7:09:35 AM] Imported an item in language 'en'.
+Item information: id = '48e68047-e86f-45a7-9d24-5cd7ff4cd05f'; type = 'Telerik.Sitefinity.Libraries.Model.Image'; provider = 'OpenAccessDataProvider'; action = 'New'
+----------------------------------------

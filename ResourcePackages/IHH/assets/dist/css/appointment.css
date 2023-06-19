@@ -1,0 +1,556 @@
+.top-banner {
+  background-color: rgb(98, 181, 221);
+}
+.top-banner .circle2-inner {
+  border-color: rgb(91, 170, 208);
+  background-color: rgb(91, 170, 208);
+}
+
+.big-name-wrapper {
+  height: 300px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .big-name-wrapper {
+    height: 150px;
+  }
+}
+.big-name-wrapper .big-name {
+  font-size: clamp(2.5rem, 4vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: white;
+}
+
+.appointment,
+.enquiry {
+  background-color: rgb(245, 245, 247);
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.appointment .inner-section,
+.enquiry .inner-section {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  box-shadow: 0px 2px 10px rgba(211, 211, 211, 0.75);
+}
+
+.top-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgb(121, 151, 175);
+}
+.top-buttons-header {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(121, 151, 175);
+  margin-bottom: 0.25rem;
+}
+.top-buttons .choice {
+  display: inline-flex;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 1rem;
+  max-width: 100%;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .top-buttons .choice {
+    padding-left: clamp(0rem, 5vw, 10%);
+    padding-right: clamp(0rem, 5vw, 10%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-buttons .choice {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.top-buttons .choice .choice-button {
+  flex: 1 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(121, 151, 175);
+  border-radius: 5px;
+  width: 100%;
+  white-space: nowrap;
+  color: rgb(121, 151, 175);
+  font-weight: 600;
+  text-decoration: none;
+  padding: clamp(0.75rem, 2vh, 1rem) 0;
+  transition: all 0.15s ease-out;
+}
+.top-buttons .choice .choice-button.active {
+  cursor: default;
+  background-color: rgb(121, 151, 175);
+  color: white;
+  pointer-events: none;
+}
+.top-buttons .choice .choice-button:not(.active) {
+  cursor: pointer;
+}
+.top-buttons .choice .choice-button:not(.active):hover {
+  background-color: #90a9bd;
+  color: white;
+}
+.top-buttons .choice .choice-button.active, .top-buttons .choice .choice-button:hover {
+  color: white;
+}
+
+.appointment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-progress {
+  margin-top: 2rem;
+  margin-bottom: 4.5rem;
+  display: flex;
+  justify-content: center;
+  width: 32.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .step-progress {
+    width: 100%;
+  }
+}
+.step-progress .step {
+  position: relative;
+  aspect-ratio: 1/1;
+  height: 4rem;
+  border: 1px solid rgb(98, 181, 221);
+  border-radius: 50%;
+  color: rgb(98, 181, 221);
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step-progress .step .step-text {
+  position: absolute;
+  text-align: center;
+  top: 115%;
+  width: 12.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(124, 125, 127);
+}
+@media screen and (max-width: 767px) {
+  .step-progress .step .step-text {
+    width: 7rem;
+  }
+}
+.step-progress .step.active {
+  color: white;
+  background-color: rgb(98, 181, 221);
+}
+.step-progress .step.active .step-text {
+  color: rgb(98, 181, 221);
+}
+.step-progress .step-divider {
+  flex-grow: 1;
+  position: relative;
+}
+.step-progress .step-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid rgb(98, 181, 221);
+}
+
+.appointment-details {
+  width: 100%;
+}
+.appointment-details-header {
+  text-align: center;
+  color: rgb(121, 151, 175);
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.appointment-details-form-items {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .appointment-details-form-items {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.appointment-details-form-items .select-item {
+  margin-bottom: 1rem;
+}
+.appointment-details-form-items .item-label,
+.appointment-details-form-items .select-error {
+  padding-left: 1.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.appointment-details-form-items .select-error {
+  min-height: 1rem;
+  color: lightcoral;
+  display: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.appointment-details-form-items .concern {
+  margin-bottom: 1rem;
+}
+.appointment-details-form-items .concern-text-area {
+  width: 100%;
+  border-radius: 25px;
+  border-color: rgb(209, 209, 209);
+  padding: 0.875rem 1.25rem 0.875rem 1.25rem;
+  height: 53px;
+}
+.appointment-details-form-items .custom-upload {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  font-weight: 500;
+  color: rgb(121, 151, 175);
+  border: 1px solid rgb(121, 151, 175);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.appointment-details-form-items .custom-upload:hover {
+  background-color: rgb(121, 151, 175);
+  color: white;
+}
+.appointment-details-form-items .custom-upload.uploaded {
+  background-color: rgb(167, 202, 192);
+  color: white;
+  border-color: rgb(167, 202, 192);
+}
+.appointment-details-form-items .custom-upload.error {
+  background-color: indianred;
+  color: white;
+  border-color: indianred;
+}
+.appointment-details-form-items .custom-upload.error:hover {
+  background-color: white;
+  color: indianred;
+}
+.appointment-details-form-items .upload-file {
+  margin-bottom: 0.5rem;
+}
+.appointment-details-form-items .date {
+  margin-bottom: 1rem;
+}
+.appointment-details-form-items .date-choice {
+  width: 100%;
+  padding: 0.875rem 1.25rem 0.875rem 1.25rem;
+  color: rgb(124, 125, 127);
+  font-weight: 500;
+  border: none;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 30px;
+}
+.appointment-details-form-items .date-choice::-moz-placeholder {
+  color: rgb(209, 209, 209);
+}
+.appointment-details-form-items .date-choice::placeholder {
+  color: rgb(209, 209, 209);
+}
+.appointment-details .details-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem 0.875rem 1.25rem;
+  color: rgb(124, 125, 127);
+  font-weight: 500;
+  border: none;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 30px;
+}
+@media screen and (max-width: 991px) {
+  .appointment-details .countrycode-wrapper {
+    width: 45%;
+  }
+}
+
+*::-moz-placeholder {
+  color: rgb(209, 209, 209);
+}
+
+*::placeholder {
+  color: rgb(209, 209, 209);
+}
+
+.appointment-choice .first-choice,
+.appointment-choice .second-choice {
+  background-color: rgb(245, 245, 247);
+  border-radius: 25px;
+  margin-top: 0.75rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .appointment-choice .first-choice,
+  .appointment-choice .second-choice {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+.appointment-choice .first-choice .header,
+.appointment-choice .second-choice .header {
+  color: rgb(121, 151, 175);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.item-header {
+  color: rgb(121, 151, 175);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.submit-wrapper {
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .submit-wrapper {
+    width: 100%;
+  }
+}
+.submit-wrapper.btn-disabled {
+  cursor: not-allowed;
+}
+.submit-wrapper.btn-disabled .submit-button {
+  background-color: lightsteelblue;
+  color: rgb(245, 245, 247);
+  border-color: transparent;
+}
+
+.submit-button {
+  background-color: rgb(98, 181, 221);
+  color: white;
+  padding: 1rem 4rem 1rem 4rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: all 0.1s ease-out;
+}
+@media screen and (max-width: 767px) {
+  .submit-button {
+    width: 100%;
+  }
+}
+.submit-button:hover {
+  background-color: white;
+  color: rgb(98, 181, 221);
+  border-color: rgb(98, 181, 221);
+}
+
+.styler + .select2-container .select2-selection {
+  border-color: rgb(209, 209, 209) !important;
+}
+
+#additional-service .modal-content {
+  border-radius: 25px;
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  #additional-service .modal-dialog {
+    max-width: 75%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #additional-service .modal-dialog {
+    max-width: 55%;
+  }
+}
+#additional-service .modal-body {
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  #additional-service .modal-body {
+    width: 65%;
+  }
+}
+#additional-service .header {
+  text-align: center;
+  color: rgb(98, 181, 221);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#additional-service .header-sub {
+  font-size: 1.5rem;
+  color: rgb(121, 151, 175);
+}
+@media screen and (max-width: 767px) {
+  #additional-service .scale-header {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #additional-service .scale-header-small {
+    font-size: 1rem;
+  }
+}
+#additional-service .additional-item {
+  padding: 1rem;
+}
+@media screen and (max-width: 991px) {
+  #additional-service .additional-item {
+    padding: 0rem;
+    margin-bottom: 0.5rem;
+  }
+}
+#additional-service .additional-item .img-wrapper {
+  aspect-ratio: 5/4;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: rgb(209, 209, 209);
+  border: 0px solid transparent;
+  transition: border 0.1s ease-out;
+}
+#additional-service .additional-item .additional-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#additional-service .round-checkbox {
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+#additional-service .round-checkbox input[type=checkbox] {
+  visibility: hidden;
+  display: none;
+}
+#additional-service .round-checkbox input[type=checkbox]:checked + .checkbox-topright {
+  background-color: rgb(98, 181, 221);
+  border-color: rgb(98, 181, 221);
+}
+#additional-service .round-checkbox input[type=checkbox]:checked ~ .img-wrapper {
+  border: 4px solid rgb(98, 181, 221);
+}
+#additional-service .checkbox-topright {
+  position: absolute;
+  right: 0;
+  margin: 1rem;
+  color: white;
+  background-color: white;
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  transition: all 0.1s ease-out;
+}
+@media screen and (max-width: 767px) {
+  #additional-service .checkbox-topright {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+#additional-service .checkbox-topright .checkerr {
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 800;
+}
+@media screen and (max-width: 767px) {
+  #additional-service .checkbox-topright .checkerr {
+    font-size: 1rem;
+  }
+}
+
+.overview-text {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .disclaimer-wrapper {
+    max-width: 75%;
+  }
+}
+
+.top-header {
+  text-align: center;
+  color: rgb(98, 181, 221);
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.phone-numbers {
+  color: rgb(98, 181, 221);
+  font-weight: 600;
+}
+
+.darkblue {
+  color: rgb(121, 151, 175) !important;
+}
+
+input[type=checkbox] {
+  min-width: 30px;
+  height: 16px;
+  margin: auto 0;
+}
+
+.appt-plswait {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  flex-direction: column;
+  font-weight: 600;
+}
+.appt-plswait.show {
+  visibility: visible;
+  pointer-events: all;
+  display: flex;
+  opacity: 1;
+}
+.appt-plswait .logo {
+  width: 100px;
+  margin-bottom: 0.5rem;
+}
+.appt-plswait > * {
+  animation: LogoBreathing 1.75s infinite ease-in-out;
+}
+
+@keyframes LogoBreathing {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .appointment-summary .title-back-button-wrapper {
+    margin-left: -1rem;
+  }
+}/*# sourceMappingURL=appointment.css.map */
