@@ -357,8 +357,7 @@
                 width: 100%;
                 position: relative;
                 overflow: hidden;
-                border-radius: 0.5rem;
-
+             
                 > * {
                     grid-area: 1/1;
                 }
@@ -376,23 +375,25 @@
                 }
 
                 .hospital-img {
-                    display: grid;
+                    // display: grid;
                     z-index: 1;
                     transition: all 0.3s linear;
                     backface-visibility: hidden;
                     isolation: isolate;
 
-                    > * {
-                        grid-area: 1/1;
-                    }
+                    // > * {
+                    //     grid-area: 1/1;
+                    // }
 
                     img {
                         z-index: 1;
+                        border-radius: 0.5rem;
+
                     }
 
                     h3 {
-                        color: white;
-                        padding: 1rem;
+                        color: rgb(84 84 84);
+                        padding: 0.75rem;
                         align-self: end;
                         font-size: 1rem;
                         margin: 0px;
@@ -401,12 +402,12 @@
                     }
 
                     &::after {
-                        content: "";
+                        // content: "";
                         display: block;
                         position: absolute;
                         width: 100%;
                         height: 20%;
-                        background: linear-gradient(to bottom, transparent, black);
+                        // background: linear-gradient(to bottom, transparent, black);
                         bottom: 0px;
                         z-index: 2;
                     }
@@ -707,7 +708,7 @@
     justify-content: left !important;
 }
 
-.dropdown {
+.mhx-2023 .dropdown {
     --btn-color: var(--mhx-sky-blue);
     width: max-content;
 
@@ -745,12 +746,13 @@
             }
         }
     }
+}
 
-    @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    .online-offer-btn {
         margin-left: -1.5rem;
     }
 }
-
 .loc-name-main {
     font-size: 1.15rem;
     margin-top: -0.15rem;
