@@ -1,0 +1,865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="test">
+    <value>Test_ID</value>
+    <comment></comment>
+    <lastModified>2023-05-18T03:57:35</lastModified>
+  </data>
+  <data name="OurSpecialties">
+    <value>Spesialisasi kami</value>
+    <comment></comment>
+    <lastModified>2023-05-23T04:00:31</lastModified>
+  </data>
+  <data name="OurRenownedHospitals">
+    <value>Rumah Sakit Ternama Kami</value>
+    <comment></comment>
+    <lastModified>2023-05-23T06:08:07</lastModified>
+  </data>
+  <data name="SelectYourPreferredLocation">
+    <value>Tentukan Rumah Sakit Pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:03:47</lastModified>
+  </data>
+  <data name="Appointment">
+    <value>Janji Temu</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:29:59</lastModified>
+  </data>
+  <data name="AskADoctor">
+    <value>Tanya Dokter</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:39:18</lastModified>
+  </data>
+  <data name="TravelGuide">
+    <value>Panduan Perjalanan</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:49:25</lastModified>
+  </data>
+  <data name="Enquiry">
+    <value>Pertanyaan</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:03:08</lastModified>
+  </data>
+  <data name="FieldRequiredErrorMessage">
+    <value>Ini adalah kolom yang harus diisi</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:11:39</lastModified>
+  </data>
+  <data name="SelectHospitalLocation">
+    <value>Pilih Lokasi Rumah Sakit</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:01:52</lastModified>
+  </data>
+  <data name="SelectSpecialtyOptional">
+    <value>Pilih Spesialisasi (Opsional)</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:28:43</lastModified>
+  </data>
+  <data name="PreferredDoctorOptional">
+    <value>Dokter yang Dipilih (Opsional)</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:30:12</lastModified>
+  </data>
+  <data name="MedicalConcern">
+    <value>Kekhawatiran / Permintaan Medis</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:00:30</lastModified>
+  </data>
+  <data name="MedicalConcernDescription">
+    <value>Silakan unggah rekam medis jika Anda memilikinya.&lt;br/&gt;
+Format file: Hanya JPG/PDF. &lt;br/&gt;
+(Ukuran file kurang dari 10mb. Jika ukuran file Anda lebih besar dari ukuran yang dialokasikan, Anda dapat memasukkan tautan unduhan di kotak pesan di atas) </value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:47:26</lastModified>
+  </data>
+  <data name="AttachFileBtn">
+    <value>File Lampiran</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:56:31</lastModified>
+  </data>
+  <data name="FirstOption">
+    <value>Opsi Pertama</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:57:31</lastModified>
+  </data>
+  <data name="SecondOption">
+    <value>Opsi Kedua</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:59:01</lastModified>
+  </data>
+  <data name="PreferredDate">
+    <value>Tanggal yang Dipilih</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:00:47</lastModified>
+  </data>
+  <data name="PreferredTime">
+    <value>Waktu yang Dipilih</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:00:59</lastModified>
+  </data>
+  <data name="SelectSpecialty">
+    <value>Pilih Spesialisasi</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:02:27</lastModified>
+  </data>
+  <data name="PreferredDoctor">
+    <value>Dokter yang Dipilih</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:02:49</lastModified>
+  </data>
+  <data name="Optional">
+    <value>Opsional</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:03:11</lastModified>
+  </data>
+  <data name="Nationality">
+    <value>Kewarganegaraan</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:04:09</lastModified>
+  </data>
+  <data name="Gender">
+    <value>Jenis Kelamin</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:04:39</lastModified>
+  </data>
+  <data name="DateofBirth">
+    <value>Tanggal Lahir</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:05:11</lastModified>
+  </data>
+  <data name="PassportNo">
+    <value>No. Paspor</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:06:32</lastModified>
+  </data>
+  <data name="CountryCode">
+    <value>Kode Negara</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:08:50</lastModified>
+  </data>
+  <data name="ContactNumber">
+    <value>Nomor Kontak</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:09:12</lastModified>
+  </data>
+  <data name="AlternativeContactNumber">
+    <value>Nomor Kontak Alternatif</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:09:35</lastModified>
+  </data>
+  <data name="RequiredFieldsDescription">
+    <value>*menunjukkan kolom yang wajib diisi</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:10:47</lastModified>
+  </data>
+  <data name="IHHMYConsent">
+    <value>Saya telah membaca, memahami, dan menyetujui {0} IHH MY.</value>
+    <comment></comment>
+    <lastModified>2023-05-29T13:45:25</lastModified>
+  </data>
+  <data name="PDPNotice">
+    <value>Pemberitahuan Perlindungan Data Pribadi</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:12:24</lastModified>
+  </data>
+  <data name="AgreeReceiveMarketingMessage">
+    <value>Saya setuju untuk menerima pesan atau jaminan terkait pemasaran.</value>
+    <comment></comment>
+    <lastModified>2023-05-29T13:45:54</lastModified>
+  </data>
+  <data name="VerifyHuman">
+    <value>*Harap validasi Google reCaptcha</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:36:37</lastModified>
+  </data>
+  <data name="Next">
+    <value>Berikutnya</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:04:27</lastModified>
+  </data>
+  <data name="PassportName">
+    <value>Nama (sesuai Paspor)</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:06:13</lastModified>
+  </data>
+  <data name="Submit">
+    <value>Kirim</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:08:14</lastModified>
+  </data>
+  <data name="Time">
+    <value>Waktu</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:39:21</lastModified>
+  </data>
+  <data name="ChooseLocation">
+    <value>Pilih Lokasi</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:56:35</lastModified>
+  </data>
+  <data name="ChooseSpecialty">
+    <value>Pilih Spesialisasi</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:56:58</lastModified>
+  </data>
+  <data name="SearchSelectDoctor">
+    <value>Cari atau pilih dokter</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:57:36</lastModified>
+  </data>
+  <data name="YourPreferredTime">
+    <value>Waktu Pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:08:22</lastModified>
+  </data>
+  <data name="SelectNationality">
+    <value>Pilih kewarganegaraan </value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:12:53</lastModified>
+  </data>
+  <data name="SelectGender">
+    <value>Pilih jenis kelamin </value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:13:24</lastModified>
+  </data>
+  <data name="EnterEmail">
+    <value>Masukkan email</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:14:17</lastModified>
+  </data>
+  <data name="Date">
+    <value>Tanggal</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:42:40</lastModified>
+  </data>
+  <data name="MakeAn">
+    <value>Saya ingin membuat</value>
+    <comment></comment>
+    <lastModified>2023-06-09T09:48:59</lastModified>
+  </data>
+  <data name="AppointmentDetails">
+    <value>Detail Janji Temu</value>
+    <comment></comment>
+    <lastModified>2023-05-29T11:11:25</lastModified>
+  </data>
+  <data name="EmailAddress">
+    <value>Alamat Email</value>
+    <comment></comment>
+    <lastModified>2023-05-29T13:44:59</lastModified>
+  </data>
+  <data name="Specialty">
+    <value>Spesialisasi</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:22:35</lastModified>
+  </data>
+  <data name="Language">
+    <value>Bahasa</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:22:57</lastModified>
+  </data>
+  <data name="CertificationQualifications">
+    <value>Sertifikasi &amp; Kualifikasi</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:24:09</lastModified>
+  </data>
+  <data name="Day">
+    <value>Hari</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:27:00</lastModified>
+  </data>
+  <data name="RelatedSpecialtyDoctors">
+    <value>Dokter Spesialis Terkait</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:34:31</lastModified>
+  </data>
+  <data name="ViewProfile">
+    <value>Lihat Profil</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:42:09</lastModified>
+  </data>
+  <data name="MakeAnAppointment">
+    <value>Buat Janji Temu</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:42:19</lastModified>
+  </data>
+  <data name="ClinicHours">
+    <value>Jam Buka Klinik</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:44:05</lastModified>
+  </data>
+  <data name="HealthScreening">
+    <value>Pemeriksaan Kesehatan</value>
+    <comment></comment>
+    <lastModified>2023-05-30T09:18:44</lastModified>
+  </data>
+  <data name="NotAgreeReceiveMarketingMessage">
+    <value>Saya tidak setuju untuk menerima pesan atau jaminan terkait pemasaran.</value>
+    <comment></comment>
+    <lastModified>2023-05-31T03:58:24</lastModified>
+  </data>
+  <data name="RoomsRates">
+    <value>Kamar &amp; Tarif</value>
+    <comment></comment>
+    <lastModified>2023-06-02T02:51:07</lastModified>
+  </data>
+  <data name="RoomsRatesPrice">
+    <value>+ per malam</value>
+    <comment></comment>
+    <lastModified>2023-06-02T03:17:34</lastModified>
+  </data>
+  <data name="FlightsToMalaysia">
+    <value>Penerbangan ke Malaysia</value>
+    <comment></comment>
+    <lastModified>2023-06-02T05:35:35</lastModified>
+  </data>
+  <data name="TGFrom">
+    <value>Dari</value>
+    <comment></comment>
+    <lastModified>2023-06-02T05:40:25</lastModified>
+  </data>
+  <data name="PlaceToVisit">
+    <value>Tempat-tempat yang Bisa Dikunjungi</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:31:29</lastModified>
+  </data>
+  <data name="Activities">
+    <value>Aktivitas</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:34:17</lastModified>
+  </data>
+  <data name="Explore">
+    <value>Jelajahi</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:34:39</lastModified>
+  </data>
+  <data name="WhatsappUs">
+    <value>WhatsApp Kami</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:59:03</lastModified>
+  </data>
+  <data name="TGGrabCar">
+    <value>Atau, Anda bisa memesan GrabCar atau taksi dari bandara ke </value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:09:46</lastModified>
+  </data>
+  <data name="TGTransportTopText">
+    <value>&lt;h2 class="airport-transfer-header"&gt;
+    Penjemputan di Bandara
+&lt;/h2&gt;
+&lt;p&gt;
+    Anda bisa mengajukan pelayanan antar-jemput gratis dari kami (tergantung ketersediaan) &lt;br&gt;
+    Harap lakukan reservasi minimal dua hari sebelumnya dengan menyampaikan informasi berikut:
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Nama dan paspor pasien dan pendamping&lt;/li&gt;
+    &lt;li&gt;Detail kontak&lt;/li&gt;
+    &lt;li&gt;Detail penerbangan&lt;/li&gt;
+    &lt;li&gt;Detail janji temu&lt;/li&gt;
+
+&lt;/ul&gt;</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:28:08</lastModified>
+  </data>
+  <data name="EmailUs">
+    <value>Email Kami</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:44:27</lastModified>
+  </data>
+  <data name="TGNeedToBook">
+    <value>Perlu untuk Memesan Penjemputan di Bandara?</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:45:04</lastModified>
+  </data>
+  <data name="TGHotels">
+    <value>Hotel</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:48:10</lastModified>
+  </data>
+  <data name="ShowAllFlights">
+    <value>Tunjukkan Semua Penerbangan</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:10:42</lastModified>
+  </data>
+  <data name="ShowAllPlaces">
+    <value>Tampilkan Semua Tempat Untuk Dikunjungi</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:11:13</lastModified>
+  </data>
+  <data name="ShowAllHotels">
+    <value>Tampilkan Semua Hotel</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:11:58</lastModified>
+  </data>
+  <data name="RoomsRatesNote">
+    <value>Pihak manajemen berhak mengubah tarif-tarif tersebut tanpa pemberitahuan terlebih dahulu dan tarif yang tertera adalah tarif yang berlaku pada saat dipublikasikan.</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:14:19</lastModified>
+  </data>
+  <data name="LatestPackages">
+    <value>Paket dan Promosi Terbaru</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:45:35</lastModified>
+  </data>
+  <data name="CallUs">
+    <value>Hubungi kami</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:49:18</lastModified>
+  </data>
+  <data name="Doctors">
+    <value>Dokter</value>
+    <comment></comment>
+    <lastModified>2023-06-02T09:15:32</lastModified>
+  </data>
+  <data name="MakeanAppointmentorEnquiry">
+    <value>Buat Janji Temu atau Pertanyaan</value>
+    <comment></comment>
+    <lastModified>2023-06-04T15:54:06</lastModified>
+  </data>
+  <data name="YourPreferredSpecialty">
+    <value>Spesialisasi pilihan Anda </value>
+    <comment></comment>
+    <lastModified>2023-06-04T16:12:06</lastModified>
+  </data>
+  <data name="CostofTreatment">
+    <value>Biaya Perawatan</value>
+    <comment></comment>
+    <lastModified>2023-06-04T16:17:37</lastModified>
+  </data>
+  <data name="OurDoctors">
+    <value>Dokter Kami</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:27:39</lastModified>
+  </data>
+  <data name="SearchByDoctor">
+    <value>Cari menurut Nama Dokter</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:36:39</lastModified>
+  </data>
+  <data name="SearchByLocation">
+    <value>Cari menurut Lokasi</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:32:52</lastModified>
+  </data>
+  <data name="SearchByHospital">
+    <value>Cari menurut Rumah Sakit</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:33:30</lastModified>
+  </data>
+  <data name="SearchBySpecialty">
+    <value>Cari menurut Spesialisasi</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:35:12</lastModified>
+  </data>
+  <data name="PreferredHospital">
+    <value>Rumah Sakit pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:49:02</lastModified>
+  </data>
+  <data name="PreferredDoctorName">
+    <value>Nama Dokter pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:49:26</lastModified>
+  </data>
+  <data name="All">
+    <value>Semua</value>
+    <comment></comment>
+    <lastModified>2023-06-06T02:09:46</lastModified>
+  </data>
+  <data name="YourPreferredLocation">
+    <value>Lokasi pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-06-06T02:18:17</lastModified>
+  </data>
+  <data name="Packages">
+    <value>Paket</value>
+    <comment></comment>
+    <lastModified>2023-06-06T02:22:20</lastModified>
+  </data>
+  <data name="NoPackages">
+    <value>Tidak Ada Paket</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:12:45</lastModified>
+  </data>
+  <data name="Home">
+    <value>Beranda</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:23:08</lastModified>
+  </data>
+  <data name="PhoneNo">
+    <value>No. Telepon</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:26:03</lastModified>
+  </data>
+  <data name="ConfirmationOverview">
+    <value>Ringkasan Janji Temu</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:35:56</lastModified>
+  </data>
+  <data name="AppointmentConfirmed">
+    <value>Permintaan Janji Temu</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:36:04</lastModified>
+  </data>
+  <data name="UrlHospitalTG">
+    <value>Temukan Segala Sesuatu yang Perlu Anda Ketahui Tentang Bepergian ke Malaysia</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:46:58</lastModified>
+  </data>
+  <data name="UrlHospitalTGButton">
+    <value>Lihat Panduan Perjalanan Kami</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:47:27</lastModified>
+  </data>
+  <data name="ThankYou">
+    <value>Terima Kasih!</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:53:40</lastModified>
+  </data>
+  <data name="ReceivedApptDesc1">
+    <value>Kami sudah menerima permintaan janji temu dari Anda.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:55:00</lastModified>
+  </data>
+  <data name="ReceivedApptDesc2">
+    <value>Layanan pelanggan kami akan menghubungi Anda pada hari kerja yang berikutnya untuk melakukan konfirmasi janji temu Anda.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:55:19</lastModified>
+  </data>
+  <data name="ListOfHospitals">
+    <value>Daftar Rumah Sakit</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:56:05</lastModified>
+  </data>
+  <data name="ReceivedApptDesc3">
+    <value>Jika Anda memerlukan bantuan medis segera, silakan hubungi kami di:</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:56:29</lastModified>
+  </data>
+  <data name="ReceivedApptDesc4">
+    <value>Harap perhatikan bahwa belum ada konfirmasi untuk janji temu ini.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:00:14</lastModified>
+  </data>
+  <data name="Currency">
+    <value>Rp</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:00:53</lastModified>
+  </data>
+  <data name="TravelGuideRecommendDesc">
+    <value>Mari kita usahakan agar perjalanan Anda terasa lebih nyaman. Berikut adalah maskapai penerbangan &amp; akomodasi yang kami sarankan.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:22:05</lastModified>
+  </data>
+  <data name="RecommendAirlineTitle">
+    <value>Maskapai Penerbangan yang Tersedia</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:23:37</lastModified>
+  </data>
+  <data name="FindOutMore">
+    <value>Ketahui Lebih Lanjut</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:27:02</lastModified>
+  </data>
+  <data name="RecommendHotelTitle">
+    <value>Tempat Penginapan yang Tersedia</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:29:45</lastModified>
+  </data>
+  <data name="MoreTravelTips">
+    <value>Tip Perjalanan Lebih Lanjut!</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:30:31</lastModified>
+  </data>
+  <data name="PatientDetails">
+    <value>Detail Pasien</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:35:55</lastModified>
+  </data>
+  <data name="WhatsAppContactNumber">
+    <value>Nomor Kontak (sebaiknya bisa dihubungi via WhatsApp)</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:36:29</lastModified>
+  </data>
+  <data name="EnquiryForm">
+    <value>Formulir Pertanyaan</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:36:52</lastModified>
+  </data>
+  <data name="DisclaimersDesc1">
+    <value>Harap perhatikan bahwa belum ada konfirmasi untuk janji temu ini. Tim Layanan Pelanggan kami akan menghubungi Anda untuk memfinalisasi tanggal &amp; waktu janji temu Anda berdasarkan ketersediaan dokter.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:43:21</lastModified>
+  </data>
+  <data name="DisclaimersDesc2">
+    <value>Saya sudah membaca dan menegaskan bahwa detail di atas sudah akurat.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:44:07</lastModified>
+  </data>
+  <data name="MedicalConcernMessage">
+    <value>*Isi dengan 'N/A' yang berarti “not applicable” atau tidak berlaku</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:52:26</lastModified>
+  </data>
+  <data name="Female">
+    <value>Perempuan</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:55:02</lastModified>
+  </data>
+  <data name="IHHAppointmentConfirmMessage">
+    <value>Saya sudah membaca dan menegaskan bahwa detail di atas sudah akurat.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:00:57</lastModified>
+  </data>
+  <data name="IHHAppointmentConsent">
+    <value>Harap perhatikan bahwa belum ada konfirmasi untuk janji temu ini. Tim Layanan Pelanggan kami akan menghubungi Anda untuk memfinalisasi tanggal &amp; waktu janji temu Anda berdasarkan ketersediaan dokter.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:01:15</lastModified>
+  </data>
+  <data name="Back">
+    <value>Kembali</value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:07:55</lastModified>
+  </data>
+  <data name="ViewMore">
+    <value>Lihat lebih lanjut</value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:23:45</lastModified>
+  </data>
+  <data name="FlyFromIndonesia">
+    <value>Terbang dari Indonesia ke</value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:27:49</lastModified>
+  </data>
+  <data name="Destination">
+    <value>Tempat Tujuan</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:11:35</lastModified>
+  </data>
+  <data name="FilterBy">
+    <value>Saring menurut</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:13:19</lastModified>
+  </data>
+  <data name="CopyrightText">
+    <value>Semua Hakcipta Terpelihara © 2023 Pantai Medical Centre Sdn Bhd.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:19:07</lastModified>
+  </data>
+  <data name="PackagesPromotions">
+    <value>Paket dan Promosi</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:37:42</lastModified>
+  </data>
+  <data name="Articles">
+    <value>Artikel</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:41:02</lastModified>
+  </data>
+  <data name="MoreArticles">
+    <value>Artikel Lainnya</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:44:03</lastModified>
+  </data>
+  <data name="Monday">
+    <value>Senin</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:54:21</lastModified>
+  </data>
+  <data name="Tuesday">
+    <value>Selasa</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:54:50</lastModified>
+  </data>
+  <data name="Wednesday">
+    <value>Rabu</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:55:11</lastModified>
+  </data>
+  <data name="Thursday">
+    <value>Kamis</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:55:32</lastModified>
+  </data>
+  <data name="Friday">
+    <value>Jum'at</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:55:51</lastModified>
+  </data>
+  <data name="Others">
+    <value>Lain-lain</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:05:15</lastModified>
+  </data>
+  <data name="ClinicHourTime">
+    <value>Jam</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:15:25</lastModified>
+  </data>
+  <data name="Shop">
+    <value>Toko</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:26:43</lastModified>
+  </data>
+  <data name="SearchResults">
+    <value>Hasil Pencarian</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:55:51</lastModified>
+  </data>
+  <data name="Search">
+    <value>Cari</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:59:09</lastModified>
+  </data>
+  <data name="Topics">
+    <value>Topik</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:15:21</lastModified>
+  </data>
+  <data name="MinsRead">
+    <value>menit baca</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:20:31</lastModified>
+  </data>
+  <data name="AwardsAccreditions">
+    <value>Penghargaan &amp; Akreditasi</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:24:28</lastModified>
+  </data>
+  <data name="PleaseSelectYourPreferredHospital">
+    <value>Silahkan Pilih Rumah Sakit Pilihan Anda</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:56:03</lastModified>
+  </data>
+  <data name="ReceivedEnquiryDesc1">
+    <value>Kami sudah menerima permintaan pertanyaan dari Anda.</value>
+    <comment></comment>
+    <lastModified>2023-06-07T08:28:57</lastModified>
+  </data>
+  <data name="DoctorAppointment">
+    <value>Janji Temu dengan Dokter</value>
+    <comment></comment>
+    <lastModified>2023-06-08T08:57:10</lastModified>
+  </data>
+  <data name="HealthScreeningAppointment">
+    <value>Janji Temu untuk Skrining Kesehatan</value>
+    <comment></comment>
+    <lastModified>2023-06-08T08:58:05</lastModified>
+  </data>
+</root>

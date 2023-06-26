@@ -1,0 +1,333 @@
+.hospital-brand-overview {
+  color: rgb(124, 125, 127);
+}
+.hospital-brand-overview .hospital-banner {
+  background-position: top right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-banner {
+    background-position: bottom right;
+  }
+}
+.hospital-brand-overview .hospital-banner .hospital-details {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  height: 350px;
+}
+.hospital-brand-overview .hospital-banner .hospital-details .hospital-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-banner .hospital-details .hospital-name {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hospital-brand-overview .hospital-banner .hospital-details .hospital-name {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-banner .hospital-details {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: auto;
+  }
+}
+.hospital-brand-overview .hospital-description {
+  padding-bottom: 2rem;
+  background-color: rgb(245, 245, 247);
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-description {
+    padding-bottom: 2.5rem;
+  }
+}
+.hospital-brand-overview .hospital-description-header {
+  color: rgb(121, 151, 175);
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-description-header {
+    margin-bottom: 1rem;
+  }
+}
+.hospital-brand-overview .hospital-description-text {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.hospital-brand-overview .hospital-list {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.hospital-brand-overview .hospital-list-header {
+  text-align: center;
+  color: rgb(98, 181, 221);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  margin-bottom: 1rem;
+}
+.hospital-brand-overview .hospital-list-items {
+  display: flex;
+  gap: 1.5rem;
+  row-gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .hospital-brand-overview .hospital-list-items {
+    flex-direction: column;
+  }
+}
+.hospital-brand-overview .hospital-list-items .hospital-item,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos {
+  flex-basis: 27.5%;
+}
+@media screen and (max-width: 991px) {
+  .hospital-brand-overview .hospital-list-items .hospital-item,
+  .hospital-brand-overview .hospital-list-items .hospital-item-hos {
+    max-width: calc(50% - 0.75rem);
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hospital-brand-overview .hospital-list-items .hospital-item,
+  .hospital-brand-overview .hospital-list-items .hospital-item-hos {
+    max-width: calc(25% - 1.125rem);
+    flex-basis: 25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hospital-brand-overview .hospital-list-items .hospital-item,
+  .hospital-brand-overview .hospital-list-items .hospital-item-hos {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.hospital-brand-overview .hospital-list-items .hospital-item .hospital-item-link-wrapper,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos .hospital-item-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+.hospital-brand-overview .hospital-list-items .hospital-item .hospital-item-link-wrapper:hover .hospital-item-img,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos .hospital-item-link-wrapper:hover .hospital-item-img {
+  transform: scale(1.05);
+}
+.hospital-brand-overview .hospital-list-items .hospital-item-img,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos-img {
+  flex-shrink: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.25s ease-in-out;
+}
+.hospital-brand-overview .hospital-list-items .hospital-item-img-wrapper,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos-img-wrapper {
+  min-height: 18rem;
+  isolation: isolate;
+  border-radius: 5px;
+  max-width: 100%;
+  aspect-ratio: 3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-height: 991px) {
+  .hospital-brand-overview .hospital-list-items .hospital-item-img-wrapper,
+  .hospital-brand-overview .hospital-list-items .hospital-item-hos-img-wrapper {
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+.hospital-brand-overview .hospital-list-items .hospital-item-texts,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos-texts {
+  margin-top: 1rem;
+}
+.hospital-brand-overview .hospital-list-items .hospital-item-texts-header,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos-texts-header {
+  color: rgb(121, 151, 175);
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.35rem, 4vw, 1.5rem);
+  font-weight: 600;
+}
+.hospital-brand-overview .hospital-list-items .hospital-item-texts .specialty-in:before,
+.hospital-brand-overview .hospital-list-items .hospital-item-hos-texts .specialty-in:before {
+  content: "Specialty in: ";
+}
+.hospital-brand-overview .hospital-list .showall-wrapper {
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .hospital-brand-overview .hospital-list .showall-wrapper {
+    width: 100%;
+  }
+}
+.hospital-brand-overview .hospital-list-showall {
+  padding: 0.75rem 3rem 0.75rem 3rem;
+  color: rgb(121, 151, 175);
+  border: 1px solid rgb(121, 151, 175);
+  border-radius: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.1s ease-out;
+}
+.hospital-brand-overview .hospital-list-showall:hover {
+  color: white;
+  background-color: rgb(121, 151, 175);
+}
+@media screen and (max-width: 767px) {
+  .hospital-brand-overview .hospital-list-showall {
+    width: 100%;
+  }
+}
+
+.package-hospital {
+  color: rgb(98, 181, 221);
+  font-weight: 500;
+}
+
+.post-label-date {
+  color: rgb(121, 151, 175);
+  font-weight: 500;
+}
+
+.package-summary {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  margin-top: 0.25rem;
+}
+
+.location-select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+@media screen and (max-width: 767px) {
+  .location-select {
+    position: relative;
+  }
+}
+.location-select .select-location {
+  width: 300px;
+}
+@media screen and (max-width: 767px) {
+  .location-select .select-location {
+    width: 100% !important;
+  }
+}
+.location-select .select-location + .select2-container {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 300px;
+}
+@media screen and (max-width: 767px) {
+  .location-select .select-location + .select2-container {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .location-select .select-location + .select2-container {
+    width: 270px !important;
+  }
+}
+.location-select .select-location + .select2-container--open .select2-selection {
+  border-radius: 27.5px 27.5px 0 0 !important;
+  border-color: rgb(98, 181, 221) !important;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 767px) {
+  .location-select .select-location + .select2-container--open .select2-selection {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .location-select .select-location + .select2-container--open .select2-selection {
+    width: 270px !important;
+  }
+}
+.location-select .select-location + .select2-container .select2-selection {
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 30px;
+  border-color: darkgray;
+  transition: border-color 0.15s ease-in;
+}
+.location-select .select-location + .select2-container .select2-selection__rendered {
+  margin: 0.75rem 1.25rem 0.75rem 1.25rem;
+  font-weight: 500;
+  color: rgb(124, 125, 127);
+}
+.location-select .select-location + .select2-container .select2-selection__placeholder {
+  color: rgb(124, 125, 127);
+}
+.location-select .select-location + .select2-container .select2-selection__arrow {
+  margin: 0.75rem 1.25rem 0.75rem 1.25rem;
+}
+
+.select2-dropdown.select-location {
+  border: 1px solid rgb(98, 181, 221);
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 15px 15px;
+  overflow: hidden;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+.select2-dropdown.select-location .select2-results > .select2-results__options {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.select2-dropdown.select-location .select2-results__option {
+  padding: 1rem !important;
+  max-width: inherit;
+  word-break: break-all;
+}
+
+.selects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .selects {
+    width: 300px;
+  }
+}
+.selects .select-label {
+  display: inline-block;
+}/*# sourceMappingURL=hospital-brand-overview.css.map */

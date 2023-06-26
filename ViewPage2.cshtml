@@ -1,0 +1,429 @@
+﻿@model Telerik.Sitefinity.Frontend.DynamicContent.Mvc.Models.DynamicContentListViewModel
+
+@using System;
+@using System.Linq;
+@using System.Collections.Generic;
+
+@using Telerik.Sitefinity;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Model;
+@using Telerik.Sitefinity.Data.Linq.Dynamic;
+
+@using SitefinityWebApp.Helpers;
+@{
+    var localPrefix = FrontendUrlHelper.GetLocalPrefix();
+
+    var hospitals = ManagerHelper.GetHospitalDynamicContents().ToList();
+
+    Dictionary<string, string> all_modules = new Dictionary<string, string>()
+{
+        {IHHConstants.WebServiceAppointments, "Appointment" },
+        {IHHConstants.WebServiceEnquiries, "Enquiries" },
+    };
+
+    var authorized_modules = RoleHelper.GetAuthirizedModule();
+
+}
+
+<div class="export-data">
+    <div class="container py-5">
+        <div class="row">
+
+            <div class="col-md-3">
+                <a> Select Module</a>
+
+                <select class="form-control" id="ddlModules">
+                    <option value="" disabled="disabled">(No module selected)</option>
+                    @foreach (var module in all_modules)
+                    {
+                        if (!RoleHelper.IsAdminstrator())
+                        {
+                            if (authorized_modules.Contains(module.Key))
+                            {
+                                <option value="@module.Key">@module.Value</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="@module.Key">@module.Value</option>
+                        }
+
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <a> Select Hospital</a>
+
+                <select class="form-control" id="ddlHospitals">
+                    <option data-h-Id="@Guid.Empty" value="All">AllHospitals</option>
+                    @foreach (var item in hospitals.OrderBy(o => o.GetString("Title")))
+                    {
+                        <option data-h-Id="@item.Id" value="@item.OriginalContentId">@item.GetValue("Title").ToString()</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-3">
+                <div class="search-field">
+                    <a>Start From</a>
+                    <div class="datepicker-wrapper with-icon export-datepicker-wrapper">
+                        <span class="g-ic-calendar field-icon"></span>
+                        <input type="text" id="txtStartDate" name="txtStartDate" class="single-date" maxlength="20" placeholder='YYYY-MM-DD'>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="search-field">
+                    <a>End At</a>
+                    <div class="datepicker-wrapper with-icon export-datepicker-wrapper">
+                        <span class="g-ic-calendar field-icon"></span>
+                        <input type="text" id="txtEndDate" name="txtEndDate" class="single-date" maxlength="20" placeholder='YYYY-MM-DD'>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="preview" class="text-center">
+
+    </div>
+
+    <div class="text-center">
+        <a href="JavaScript:void(0);" id="export" class="button primary" data-sf-ec-immutable="">Export</a>
+    </div>
+
+    <div class="js-spinner spinner-block">
+        <img class="spinner-icon" src="~/ResourcePackages/IHH/assets/dist/images/spinner.svg" alt="">
+    </div>
+
+
+
+</div>
+
+
+<script type="text/javascript">
+    var Spinner = $('.js-spinner.spinner-block')
+    var url;
+    var excelname;
+    var module;
+    var startdate;
+    var enddate;
+    var hospital;
+    $(document).ready(function () {
+        initializeDatepicker();
+    });
+    $('#export').click(function () {
+        generateExcelName();
+        updateUrl();
+        sendRequest();
+    });
+    $('#ddlModules').on('change', function () {
+        refreshHospitalFilter();
+        generateExcelName();
+        updateUrl();
+        showPreviousCount();
+    })
+
+    $('#ddlHospitals, #txtStartDate, #txtEndDate').on('change', function () {
+        generateExcelName();
+        updateUrl();
+        showPreviousCount();
+    })
+
+    function initializeDatepicker() {
+        $('.single-date').datepicker({
+            singleDatePicker: true,
+            dateFormat: 'yy-mm-dd'
+        })
+        $('.single-date').on('change', function () {
+            if ($('#txtStartDate').val() != '' && $('#txtEndDate').val() != '') {
+                var s = $('#txtStartDate').val();
+                var e = $('#txtEndDate').val();
+                var date1 = new Date(s.substring(5, 6) + '/' + s.substring(8, 9) + '/' +s.substring(0, 4));
+                var date2 = new Date(e.substring(5, 6) + '/' + e.substring(8, 9) + '/' + e.substring(0, 4));
+
+                var Difference_In_Time = date2.getTime() - date1.getTime();
+
+                var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+                console.log(Difference_In_Days);
+            }
+        })
+    }
+
+    function updateUrl() {
+       var m = $('#ddlModules').val();
+       var h = $('#ddlHospitals').val();
+       var s = $('#txtStartDate').val();
+       var e = $('#txtEndDate').val();
+
+        if (m != undefined && m != '') {
+            url = `${window.location.origin}/api/default/${m}`;
+            url = `${url}?$orderby=DateCreated`;
+            if (h != 'All' || s != '' || e != '') {
+                url = `${url}&$filter=`;
+                if (h != 'All' && h != undefined && h != '') {
+                    url = `${url}${getHospitalFilterString(m,h)}`
+                }
+                if (s != '' && s != undefined) {
+                    url = `${url} DateCreated ge ${s} AND`
+                }
+
+                if (e != '' && e != undefined) {
+                    url = `${url} DateCreated le ${e} AND`
+                }
+
+            }
+            if (url.endsWith(' AND')) {
+                url = url.substring(0, url.length - 3);
+            }
+            url = `${url}${getSelectString(m)}`;
+/*            url = `${url}${getExpandString(m)}`;*/
+            console.log(url);
+        }
+    }
+
+    function generateExcelName() {
+        module = $('#ddlModules option:selected').text();
+        hospital = $('#ddlHospitals option:selected').text();
+        startdate = $('#txtStartDate').val();
+        enddate = $('#txtEndDate').val();
+
+        excelname = `${module}_${hospital}_${formatDate()}`;
+    }
+
+    function formatDate() {
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+            time = d.getTime()
+
+        if (month.length < 2)
+            month = '0' + month;
+        if (day.length < 2)
+            day = '0' + day;
+
+        return `${[year, month, day].join('-')}_${time}`;
+    }
+    var test;
+    function showPreviousCount() {
+
+        var preview_url = `${url}&$count=true&$top=0`;
+        $.ajax({
+            url: preview_url,
+            method: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            success: function (data) {
+                console.log(`GET preview count success ${data["@@odata.count"]}`);
+                $('#preview').html(`${data["@@odata.count"]} item(s) found.`);
+                test = data;
+            },
+            error: function (err) {
+                console.log(err);
+            },
+        });
+    }
+
+    function refreshHospitalFilter() {
+        $('#ddlHospitals').val('All');
+    }
+
+    @*function getHospitalTexonId(hosp_id) {
+        switch (hosp_id) {
+            case '10b6aff4-bef9-4509-a890-91199f51b2f7': // kk
+                return '05b0f089-8ed9-48a3-9a66-95a6119f50c1';
+            case '7ee519a8-2469-4f6c-a22d-5e807909ba0f': //KL
+                return '7c126675-c99d-4826-9a96-126157b11492';
+            case 'fbb53b3d-3270-4209-bad8-25cf1c2c484e': //johor
+                return '5f8f3c5f-8225-4600-96ed-ba3e89ee8c96';
+            case 'e0851a9c-bada-4aa7-a977-1d4a88b0e5cb': //penang
+                return '7e348109-609c-4504-b9d1-48cb6c248497';
+            default:
+                return @Guid.Empty.ToString()
+        }
+    }*@
+
+    function getSelectString(moduleNume) {
+        switch (moduleNume) {
+            case '@IHHConstants.WebServiceAppointments':
+                return '&$select=FullName,Email,ICorPassportNumber,DateofBirth,CountryCode,ContactNumber,AppointmentType,FirstAppointmentDate,FirstAppointmentTime,SecondAppointmentDate,SecondAppointmentTime,CurrentMedicalConditionsSymptoms,Language,AcknowledgePDP,AgreeReceiveMessages,HospitalName,SpecialtyName,DoctorName,Rating,LastModified,DateCreated';
+            case '@IHHConstants.WebServiceEnquiries':
+                return '&$select=FullName,Email,ICorPassportNumber,CountryCode,ContactNumber,Message,HospitalName,AcknowledgePDP,AgreeReceiveMessages,UserRating,LastModified,DateCreated';
+
+            default:
+                return '';
+        }
+
+    }
+
+    @*function getExpandString(moduleNume) {
+        switch (moduleNume) {
+            case '@IHHConstants.WebServiceAppointments':
+                return '&$expand=Hospital($select=Title),Specialty($select=Title),Doctor($select=Title)';
+            case '@IHHConstants.WebServiceEnquiries':
+                return '&$expand=Hospital($select=Title)';
+
+            default:
+                return '';
+        }
+
+    }*@
+
+    function getExcelHeader() {
+        var moduleName = $('#ddlModules').val();
+
+        if (moduleName == "@IHHConstants.WebServiceAppointments") {
+            return ["FullName", "Email", "ICorPassportNumber", "DateofBirth", "CountryCode", "ContactNumber", "AppointmentType", "FirstAppointmentDate", "FirstAppointmentTime", "SecondAppointmentDate", "SecondAppointmentTime", "CurrentMedicalConditionsSymptoms", "Language", "AcknowledgePDP", "AgreeReceiveMessages", "HospitalName", "SpecialtyName", "DoctorName", "Rating", "LastModified", "DateCreated"]
+        } else if (moduleName == "@IHHConstants.WebServiceEnquiries") {
+            return ["FullName", "Email", "ICorPassportNumber", "CountryCode", "ContactNumber", "Message", "HospitalName", "AcknowledgePDP", "AgreeReceiveMessages","UserRating", "LastModified", "DateCreated"]
+        }
+    }
+
+    function getHospitalFilterString(moduleNume, hospital_id) {
+        if (moduleNume == '@IHHConstants.WebServiceAppointments' || moduleNume == '@IHHConstants.WebServiceEnquiries') {
+            return ` ParentId eq ${hospital_id} AND`;
+        }
+        //else {
+        //    return ` hospitalnames/any(x:x eq ${getHospitalTexonId(hospital_id)}) AND`;
+        //}
+        return ``;
+    }
+
+
+    function customExport(data) {
+        if (typeof XLSX == 'undefined') XLSX = require('xlsx');
+
+        //var ws = XLSX.utils.json_to_sheet(data);
+
+        //var wb = XLSX.utils.book_new();
+        //XLSX.utils.book_append_sheet(wb, ws, "People");
+
+        //XLSX.writeFile(wb, `${excelname}.xlsx`);
+
+        //const workbook = XLSX.utils.book_new();
+        //const myHeader = getExcelHeader($('#ddlModule').val());
+        //const worksheet = XLSX.utils.json_to_sheet(data, { header: myHeader });
+
+        //const range = XLSX.utils.decode_range(worksheet['!ref']);
+        //range.e['c'] = myHeader.length - 1;
+        //worksheet['!ref'] = XLSX.utils.encode_range(range);
+        ////worksheet['!cols'] = [{ wch: 50 }];
+
+
+
+        //XLSX.utils.book_append_sheet(workbook, worksheet, $('ddlModule option:selected').text());
+        //XLSX.writeFile(workbook, `${excelname}.xlsx`);
+
+        //var myHeader = ["DateCreated", "FullName", "ICorPassportNumber", "Email", "ContactNumber", "HospitalorClinicorOrganisation", "HospitalorClinicorOrganisationAddress", "MMCNumber", "Accommodation", "NumberOfPax", "CheckInDate", "CheckOutDate", "IncludeBreakfast", "IsVegetarian", "AgreeReceiveMessages", "SymposiumName"];
+        var myHeader = getExcelHeader();
+        const workbook = XLSX.utils.book_new();
+        const worksheet = XLSX.utils.json_to_sheet(data, { header: myHeader });
+
+
+        XLSX.utils.book_append_sheet(workbook, worksheet, $('ddlSymposiums option:selected').text());
+        XLSX.writeFile(workbook, `${excelname}.xlsx`);
+    }
+
+    //Object.flatten = function (data) {
+    //    var result = {};
+    //    function recurse(cur, prop) {
+    //        if (Object(cur) !== cur) {
+    //            //result[prop] = cur;
+    //            /*result[prop] = GenerateCustomValue(prop, cur);*/
+
+    //        } else if (Array.isArray(cur)) {
+    //            for (var i = 0, l = cur.length; i < l; i++)
+    //                recurse(cur[i], prop);
+    //            //if (l == 0)
+    //            //    result[prop] = [];
+    //        } else {
+    //            var isEmpty = true;
+    //            for (var p in cur) {
+    //                isEmpty = false;
+    //                recurse(cur[p], prop ? prop + "." + p : p);
+    //            }
+    //            if (isEmpty && prop)
+    //                result[prop] = {};
+    //        }
+    //    }
+    //    recurse(data, "");
+    //    return result;
+    //}
+
+    @*function GenerateCustomValue(fieldName, value) {
+        switch (fieldName) {
+            case 'AppointmentType':
+                if (value == 0) {
+                    return '';
+                }
+                return (value == 1) ? '@Html.Resource("DoctorsAppointment", "_GleneaglesLabels")' : '@Html.Resource("HealthScreeningAppointment", "_GleneaglesLabels")';
+            default:
+                return value;
+        }
+    }*@
+
+    function resetAll() {
+        //url = '';
+        //excelname = '';
+        //module = '';
+        //startdate = '';
+        //enddate = '';
+        //hospital = '';
+
+        //$('#ddlModule').val('');
+        //$('#ddlHospital').val('');
+        //$('#txtStartDate').val('');
+        //$('#txtEndDate').val('');
+
+        $('input, select').val('')
+        //$('#ddlHospital').val('');
+        //$('select').selectric('refresh');
+
+        location.reload();
+    }
+
+    function showLoading() {
+        Spinner.show();
+        Spinner.css('opacity', 1);
+        Spinner.css('z-index', 200);
+        Spinner.css('visibility', 'visible');
+    }
+
+    function hideLoading() {
+        Spinner.hide();
+        Spinner.css('opacity', 0);
+        Spinner.css('z-index', -1);
+        Spinner.css('visibility', 'hidden');
+    }
+
+    function sendRequest() {
+        $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            beforeSend: function () {
+                showLoading();
+            },
+            success: function (data) {
+                //var newArr = [];
+                //console.log(data);
+                //data.value.forEach(function (item ,index) {
+                //    newArr.push(Object.flatten(item));
+                //})
+                customExport(data.value);
+                hideLoading();
+                alert(`${excelname}.xlsx downloaded.`);
+                resetAll();
+            },
+            error: function (err) {
+                alert(`Error exporting data! ${err}`);
+                hideLoading();
+                console(err);
+            },
+        });
+    };
+</script>

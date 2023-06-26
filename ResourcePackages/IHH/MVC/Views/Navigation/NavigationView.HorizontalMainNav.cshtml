@@ -1,0 +1,515 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.INavigationModel
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Navigation.Mvc.Models;
+@using Telerik.Sitefinity.Modules.Pages;
+@using System.Globalization;
+@using System.Configuration;
+@using SitefinityWebApp.Helpers;
+@*Add scripts and stylesheets*@
+
+
+<ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+    <li class="nav-item dropdown d-none ">
+        <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Brands <i class="fa fa-chevron-down"></i></a>
+        <ul class="dropdown-menu">
+            <li>
+                <a class="dropdown-item " href="/gleneagles"><img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/gleneagles-logo-stack.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo"></a>
+            </li>
+            <hr>
+            <li>
+                <a class="dropdown-item " href="/pantai"><img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/prince_logo.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo"></a>
+            </li>
+            <hr>
+            <li>
+                <a class="dropdown-item " href="/princecourt-medicalcentre"><img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/pantai-logo.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo"></a>
+            </li>
+
+        </ul>
+    </li>
+    @{
+        int i = 0;
+        foreach (var node in Model.Nodes)
+        {
+            @RenderRootLevelNode(node, i);
+            i++;
+        }
+    }
+
+    <div class="navbar-mobile-cta">
+        <a href="https://wa.me/622127899788" class="navbar-mobile-whatsapp d-lg-none a-wrapper" target="_blank">
+            <i class="icons fab fa-whatsapp me-3"></i>@Html.Resource("WhatsappUs", "_IHHLabel")
+        </a>
+    </div>
+</ul>
+
+
+@*Here is specified the rendering for the root level*@
+@helper RenderRootLevelNode(NodeViewModel node, int i)
+{
+    if (node.ChildNodes.Count > 0)
+    {
+        if (node.Url.Contains("travel-guide"))
+        {
+            <li class="nav-item">
+                <a class="nav-link @GetClass(node)" href="@FrontendUrlHelper.GetLocationHosSmartUrl("travel-guide")" target="@node.LinkTarget">@node.Title</a>
+                @*<a class="nav-link @GetClass(node)" href="@FrontendUrlHelper.GetSmartUrl("travel-guide")" target="@node.LinkTarget">@node.Title</a>*@
+            </li>
+        }
+        else if (node.Url.Contains("hospitals"))
+        {
+            <li class="nav-item dropdown mega-menu">
+                <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    @node.Title
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+
+                <div class="dropdown-menu mega">
+                    <div class="dropdown-mega-header">Our Hospitals</div>
+                    <div class="dropdown-mega">
+                        <div class="mega-side">
+                            <div class="mega-side-buttons selected" data-mega-target="mega-preferred-location">Your Preferred Location</div>
+                            <div class="mega-side-buttons" data-mega-target="mega-preferred-hospital">Your Preferred Hospital</div>
+                        </div>
+                        <div class="mega-content">
+                            <div class="mega-content-item show" id="mega-preferred-location">
+
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/penang" class="mega-list-header pe-none">Penang</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/penang" class="mega-list-item">Gleneagles Hospital Penang</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/penang" class="mega-list-item">Pantai Hospital Penang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/kuala-lumpur" class="mega-list-header pe-none">Kuala Lumpur</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kuala-lumpur" class="mega-list-item">Gleneagles Hospital Kuala Lumpur</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/kuala-lumpur" class="mega-list-item">Pantai Hospital Kuala Lumpur</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre" class="mega-list-item">Prince Court Medical Centre</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/malacca" class="mega-list-header pe-none">Malacca</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/ayer-keroh" class="mega-list-item">Pantai Hospital Ayer Keroh</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/johor" class="mega-list-header pe-none">Johor</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/medini-johor" class="mega-list-item">Gleneagles Hospital Medini Johor</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/kota-kinabalu" class="mega-list-header pe-none">Sabah</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kota-kinabalu" class="mega-list-item">Gleneagles Hospital Kota Kinabalu</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mega-content-item " id="mega-preferred-hospital">
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/gleneagles" class="mega-list-header pe-none">Gleneagles</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kota-kinabalu" class="mega-list-item">Gleneagles Hospital Kota Kinabalu</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kuala-lumpur" class="mega-list-item">Gleneagles Hospital Kuala Lumpur</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/medini-johor" class="mega-list-item">Gleneagles Hospital Medini Johor</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/penang" class="mega-list-item">Gleneagles Hospital Medini Penang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/pantai" class="mega-list-header pe-none">Pantai</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/kuala-lumpur" class="mega-list-item">Pantai Hospital Kuala Lumpur</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/ayer-keroh" class="mega-list-item">Pantai Hospital Ayer Keroh</a>
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/penang" class="mega-list-item">Pantai Hospital Penang</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-list-wrapper">
+                                    <div class="mega-list-inner">
+                                        <a href="/princecourt-medicalcentre" class="mega-list-header pe-none">Prince Court</a>
+                                        <div class="mega-list">
+                                            <a href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre" class="mega-list-item">Prince Court Medical Centre</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-menu mega-mobile">
+                    <div class="mega-mobile-item" data-mega-target="preferred-location">Your Preferred Location <i class="fa fa-chevron-down"></i></div>
+                    <div class="mega-mobile-item-sub" id="preferred-location">
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/penang" class="mega-mobile-header">Penang</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/penang" class="mega-mobile-list">Pantai Hospital Penang</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/penang" class="mega-mobile-list">Gleneagles Hospital Penang</a>
+                        </div>
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/kuala-lumpur" class="mega-mobile-header"> Kuala Lumpur </a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kuala-lumpur" class="mega-mobile-list">Gleneagles Hospital Kuala Lumpur</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/kuala-lumpur" class="mega-mobile-list">Pantai Hospital Kuala Lumpur</a>
+
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre" class="mega-mobile-list">Prince Court Medical Centre</a>
+                        </div>
+
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/malacca" class="mega-mobile-header">Malacca</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/ayer-keroh" class="mega-mobile-list">Pantai Hospital Ayer Keroh</a>
+                        </div>
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/johor" class="mega-mobile-header">Johor</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/medini-johor" class="mega-mobile-list">Gleneagles Hospital Medini Johor</a>
+                        </div>
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/kota-kinabalu" class="mega-mobile-header">Sabah</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kota-kinabalu" class="mega-mobile-list">Gleneagles Hospital Kota Kinabalu</a>
+                        </div>
+                    </div>
+                    <div class="mega-mobile-item" data-mega-target="preferred-hospital">Your Preferred Hospital <i class="fa fa-chevron-down"></i></div>
+                    <div class="mega-mobile-item-sub" id="preferred-hospital">
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles" class="mega-mobile-header">Gleneagles</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kota-kinabalu" class="mega-mobile-list">Gleneagles Hospital Kota Kinabalu</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/kuala-lumpur" class="mega-mobile-list">Gleneagles Hospital Kuala Lumpur</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/medini-johor" class="mega-mobile-list">Gleneagles Hospital Medini Johor</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles/penang" class="mega-mobile-list">Gleneagles Hospital Penang</a>
+                        </div>
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai" class="mega-mobile-header">Pantai</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/kuala-lumpur" class="mega-mobile-list">Pantai Hospital Kuala Lumpur</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/ayer-keroh" class="mega-mobile-list">Pantai Hospital Ayer Keroh</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/pantai/penang" class="mega-mobile-list">Pantai Hospital Penang</a>
+                        </div>
+                        <div class="mega-mobile-inner">
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre" class="mega-mobile-header">Prince Court</a>
+                            <a href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre" class="mega-mobile-list">Prince Court Medical Centre</a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        }
+        else
+        {
+            <li class="nav-item dropdown @GetClass(node)">
+                <a class="nav-link dropdown" href="#" id='@Html.UniqueId("navbarDropdownMenuLink" + i)' role="button" data-bs-toggle="dropdown" aria-expanded="false">@node.Title <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu" aria-labelledby='@Html.UniqueId("navbarDropdownMenuLink" + i)'>
+                    @RenderSubLevelsRecursive(node, i)
+                </ul>
+            </li>
+        }
+
+    }
+    else
+    {
+        @*if (node.Url.Contains("doctors"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link @GetClass(node)" href="@FrontendUrlHelper.GetLocationorBrandSmartUrl("doctors")" target="@node.LinkTarget">@node.Title</a>
+                </li>
+            }
+            else if (node.Url.Contains("packages-promotions"))
+            {
+                <li class="nav-item">
+                    <a class="nav-link @GetClass(node)" href="@FrontendUrlHelper.GetSmartUrl("packages-promotions")" target="@node.LinkTarget">@node.Title </a>
+                </li>
+            }*@
+
+        if (node.Url.Contains("doctors"))
+        {
+            @*var url = node.Url.ToString().Substring(1);
+
+                <li class="nav-item dropdown mega-menu">
+                    <a class="nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        @node.Title
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu mega">
+                        <div class="dropdown-mega-header">Our Doctors</div>
+                        <div class="dropdown-mega">
+                            <div class="mega-side">
+                                <div class="mega-side-buttons selected" data-mega-target="mega-preferred-location">Your Preferred Location</div>
+                                <div class="mega-side-buttons" data-mega-target="mega-preferred-hospital">Your Preferred Hospital</div>
+                            </div>
+                            <div class="mega-content">
+                                <div class="mega-content-item show" id="mega-preferred-location">
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/kuala-lumpur/@url" class="mega-list-header pe-none">Kuala Lumpur</a>
+                                            <div class="mega-list">
+                                                <a href="/gleneagles/kuala-lumpur/@url" class="mega-list-item">Gleneagles Hospital Kuala Lumpur</a>
+                                                <a href="/pantai/kuala-lumpur/@url" class="mega-list-item">Pantai Hospital Kuala Lumpur</a>
+                                                <a href="/princecourt-medicalcentre/@url" class="mega-list-item">Prince Court Medical Centre</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/penang/@url" class="mega-list-header pe-none">Penang</a>
+                                            <div class="mega-list">
+                                                <a href="/gleneagles/penang/@url" class="mega-list-item">Gleneagles Hospital Penang</a>
+                                                <a href="/pantai/penang/@url" class="mega-list-item">Pantai Hospital Penang</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/malacca/@url" class="mega-list-header pe-none">Malacca</a>
+                                            <div class="mega-list">
+                                                <a href="/pantai/ayer-keroh/@url" class="mega-list-item">Pantai Hospital Ayer Keroh</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/johor/@url" class="mega-list-header pe-none">Johor</a>
+                                            <div class="mega-list">
+                                                <a href="/gleneagles/medini-johor/@url" class="mega-list-item">Gleneagles Hospital Medini Johor</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/kota-kinabalu/@url" class="mega-list-header pe-none">Sabah</a>
+                                            <div class="mega-list">
+                                                <a href="/gleneagles/kota-kinabalu/@url" class="mega-list-item">Gleneagles Hospital Kota Kinabalu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mega-content-item " id="mega-preferred-hospital">
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/gleneagles/@url" class="mega-list-header pe-none">Gleneagles</a>
+                                            <div class="mega-list">
+                                                <a href="/gleneagles/kota-kinabalu/@url" class="mega-list-item">Gleneagles Hospital Kota Kinabalu</a>
+                                                <a href="/gleneagles/kuala-lumpur/@url" class="mega-list-item">Gleneagles Hospital Kuala Lumpur</a>
+                                                <a href="/gleneagles/medini-johor/@url" class="mega-list-item">Gleneagles Hospital Medini Johor</a>
+                                                <a href="/gleneagles/penang/@url" class="mega-list-item">Gleneagles Hospital Medini Penang</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/pantai/@url" class="mega-list-header pe-none">Pantai</a>
+                                            <div class="mega-list">
+                                                <a href="/pantai/kuala-lumpur/@url" class="mega-list-item">Pantai Hospital Kuala Lumpur</a>
+                                                <a href="/pantai/ayer-keroh/@url" class="mega-list-item">Pantai Hospital Ayer Keroh</a>
+                                                <a href="/pantai/penang/@url" class="mega-list-item">Pantai Hospital Penang</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mega-list-wrapper">
+                                        <div class="mega-list-inner">
+                                            <a href="/princecourt-medicalcentre/@url" class="mega-list-header pe-none">Prince Court</a>
+                                            <div class="mega-list">
+                                                <a href="/princecourt-medicalcentre/@url" class="mega-list-item">Prince Court Medical Centre</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-menu mega-mobile">
+                        <div class="mega-mobile-item" data-mega-target="preferred-location">Your Preferred Location <i class="fa fa-chevron-down"></i></div>
+                        <div class="mega-mobile-item-sub" id="preferred-location">
+                            <div class="mega-mobile-inner">
+                                <a href="/kuala-lumpur/@url" class="mega-mobile-header"> Kuala Lumpur </a>
+                                <a href="/pantai/kuala-lumpur/@url" class="mega-mobile-list">Pantai Hospital Kuala Lumpur</a>
+                                <a href="/gleneagles/kuala-lumpur/@url" class="mega-mobile-list">Gleneagles Hospital Kuala Lumpur</a>
+                                <a href="/princecourt-medicalcentre/@url" class="mega-mobile-list">Prince Court Medical Centre</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/penang/@url" class="mega-mobile-header">Penang</a>
+                                <a href="/pantai/penang/@url" class="mega-mobile-list">Pantai Hospital Penang</a>
+                                <a href="/gleneagles/penang/@url" class="mega-mobile-list">Gleneagles Hospital Penang</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/malacca/@url" class="mega-mobile-header">Malacca</a>
+                                <a href="/pantai/ayer-keroh/@url" class="mega-mobile-list">Pantai Hospital Ayer Keroh</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/johor/@url" class="mega-mobile-header">Johor</a>
+                                <a href="/gleneagles/medini-johor/@url" class="mega-mobile-list">Gleneagles Hospital Medini Johor</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/kota-kinabalu/@url" class="mega-mobile-header">Sabah</a>
+                                <a href="/gleneagles/kota-kinabalu/@url" class="mega-mobile-list">Gleneagles Hospital Kota Kinabalu</a>
+                            </div>
+                        </div>
+                        <div class="mega-mobile-item" data-mega-target="preferred-hospital">Your Preferred Hospital <i class="fa fa-chevron-down"></i></div>
+                        <div class="mega-mobile-item-sub" id="preferred-hospital">
+                            <div class="mega-mobile-inner">
+                                <a href="/gleneagles/@url" class="mega-mobile-header">Gleneagles</a>
+                                <a href="/gleneagles/kota-kinabalu/@url" class="mega-mobile-list">Gleneagles Hospital Kota Kinabalu</a>
+                                <a href="/gleneagles/kuala-lumpur/@url" class="mega-mobile-list">Gleneagles Hospital Kuala Lumpur</a>
+                                <a href="/gleneagles/medini-johor/@url" class="mega-mobile-list">Gleneagles Hospital Medini Johor</a>
+                                <a href="/gleneagles/penang/@url" class="mega-mobile-list">Gleneagles Hospital Penang</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/pantai/@url" class="mega-mobile-header">Pantai</a>
+                                <a href="/pantai/kuala-lumpur/@url" class="mega-mobile-list">Pantai Hospital Kuala Lumpur</a>
+                                <a href="/pantai/ayer-keroh/@url" class="mega-mobile-list">Pantai Hospital Ayer Keroh</a>
+                                <a href="/pantai/penang/@url" class="mega-mobile-list">Pantai Hospital Penang</a>
+                            </div>
+                            <div class="mega-mobile-inner">
+                                <a href="/princecourt-medicalcentre/@url" class="mega-mobile-header">Prince Court</a>
+                                <a href="/princecourt-medicalcentre/@url" class="mega-mobile-list">Prince Court Medical Centre</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>*@
+
+            <li class="nav-item">
+                <a class="nav-link @GetClass(node)" href="@FrontendUrlHelper.GetSmartUrl("doctors")" target="@node.LinkTarget">@node.Title</a>
+            </li>
+
+        }
+        else if (node.Url.Contains("packages-promotions"))
+        {
+            var url = node.Url.ToString().Substring(1);
+
+            <li class="nav-item dropdown @GetClass(node)">
+                <a class="nav-link dropdown" href="#" id='@Html.UniqueId("navbarDropdownMenuLink" + i)' role="button" data-bs-toggle="dropdown" aria-expanded="false">@node.Title <i class="fa fa-chevron-down"></i></a>
+                <ul class="dropdown-menu" aria-labelledby='@Html.UniqueId("navbarDropdownMenuLink" + i)'>
+                    <li>
+                        <a class="dropdown-item " href="@FrontendUrlHelper.GetLocalPrefix()/penang/packages-promotions" target="">Penang</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item " href="@FrontendUrlHelper.GetLocalPrefix()/kuala-lumpur/packages-promotions" target="">Kuala Lumpur</a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item " href="@FrontendUrlHelper.GetLocalPrefix()/malacca/packages-promotions" target="">Malacca</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item " href="@FrontendUrlHelper.GetLocalPrefix()/johor/packages-promotions" target="">Johor</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item " href="@FrontendUrlHelper.GetLocalPrefix()/sabah/packages-promotions" target="">Sabah</a>
+                    </li>
+                </ul>
+            </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link @GetClass(node)" href="@node.Url" target="@node.LinkTarget">@node.Title</a>
+            </li>
+        }
+
+    }
+}
+
+@*Here is specified the rendering for all child levels*@
+@helper RenderSubLevelsRecursive(NodeViewModel node, int i)
+{
+    int j = 0;
+    foreach (var childNode in node.ChildNodes)
+    {
+        if (childNode.ChildNodes.Count > 0)
+        {
+            <li class="nav-item dropdown @GetClass(node)">
+
+                <a class="dropdown-item pe-4 @GetClass(childNode)" href="@childNode.Url">
+                    @childNode.Title
+                </a>
+                <span class="p-1 position-absolute top-0 end-0 @GetClass(childNode)" id='@Html.UniqueId("navbarDropdownMenuLink" + i + j)' role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <svg class="svg-inline--fa fa-w-16" aria-hidden="true">
+                        <use xlink:href="~/ResourcePackages/Bootstrap5/assets/dist/sprites/solid.svg#@GetCaretDirection()"></use>
+                    </svg>
+                </span>
+                <ul class="dropdown-menu top-0 start-100 mt-n2" aria-labelledby='@Html.UniqueId("navbarDropdownMenuLink" + i + j)'>
+                    @RenderSubLevelsRecursive(childNode, j)
+                </ul>
+            </li>
+        }
+        else
+        {
+            @*if (childNode.Url.Contains("/travel-guide"))
+                {
+                    if (childNode.Url.Contains("/travel-guide/overview"))
+                    {
+                        <li>
+                            <a class="dropdown-item @GetClass(childNode)" href="@FrontendUrlHelper.GetSmartUrl("travel-guide")" target="@childNode.LinkTarget">@childNode.Title</a>
+                        </li>
+                    }
+                    else
+                    {
+                        if (FrontendUrlHelper.IsHospitalPage())
+                        {
+                            <li>
+                                <a class="dropdown-item @GetClass(childNode)" href="@FrontendUrlHelper.GetHospitalOrSegmentFromUrl(IHHConstants.UrlSegment)@childNode.Url" target="@childNode.LinkTarget">@childNode.Title</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a class="dropdown-item @GetClass(childNode)" href="@childNode.Url" target="@childNode.LinkTarget">@childNode.Title</a>
+                            </li>
+                        }
+                    }
+                }
+                else
+                {
+                    <li>
+                        <a class="dropdown-item @GetClass(childNode)" href="@childNode.Url" target="@childNode.LinkTarget">@childNode.Title</a>
+                    </li>
+                }*@
+
+            <li>
+                <a class="dropdown-item @GetClass(childNode)" href="@childNode.Url" target="@childNode.LinkTarget">@childNode.Title</a>
+            </li>
+
+        }
+        j++;
+    }
+}
+
+
+@*Resolves the class that will be added for each node depending whether it is selected*@
+@helper GetClass(NodeViewModel node)
+{
+
+    @*if (node.IsCurrentlyOpened)
+        {
+            @Html.HtmlSanitize("active");
+        }
+        else if (node.HasChildOpen)
+        {
+            @Html.HtmlSanitize("active");
+        }*@
+}
+
+@*Resolves the caret direction depending on language direction*@
+@helper GetCaretDirection()
+{
+    if (Html.RenderDirAttribute().ToString() != "dir=\"rtl\"")
+    {
+        @Html.HtmlSanitize("caret-right");
+    }
+    else
+    {
+        @Html.HtmlSanitize("caret-left");
+    }
+}
+

@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="test">
+    <value>Test</value>
+    <comment></comment>
+    <lastModified>2023-05-18T03:57:35</lastModified>
+  </data>
+  <data name="OurSpecialties">
+    <value>Our Specialties</value>
+    <comment></comment>
+    <lastModified>2023-05-23T04:00:31</lastModified>
+  </data>
+  <data name="OurRenownedHospitals">
+    <value>Our Renowned Hospitals</value>
+    <comment></comment>
+    <lastModified>2023-05-23T06:08:07</lastModified>
+  </data>
+  <data name="SelectYourPreferredLocation">
+    <value>Select Your Preferred Location</value>
+    <comment></comment>
+    <lastModified>2023-05-23T06:17:13</lastModified>
+  </data>
+  <data name="Appointment">
+    <value>Appointment</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:29:58</lastModified>
+  </data>
+  <data name="AskADoctor">
+    <value>Ask A Doctor</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:39:18</lastModified>
+  </data>
+  <data name="TravelGuide">
+    <value>Travel Guide</value>
+    <comment></comment>
+    <lastModified>2023-05-24T06:39:48</lastModified>
+  </data>
+  <data name="Enquiry">
+    <value>Enquiry</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:03:07</lastModified>
+  </data>
+  <data name="FieldRequiredErrorMessage">
+    <value>This is a required field</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:11:39</lastModified>
+  </data>
+  <data name="MakeAn">
+    <value>I would like to make a</value>
+    <comment></comment>
+    <lastModified>2023-06-09T09:48:57</lastModified>
+  </data>
+  <data name="AppointmentDetails">
+    <value>Appointment Detail</value>
+    <comment></comment>
+    <lastModified>2023-05-30T09:11:29</lastModified>
+  </data>
+  <data name="ConfirmationOverview">
+    <value>Appointment Summary</value>
+    <comment></comment>
+    <lastModified>2023-05-30T09:11:41</lastModified>
+  </data>
+  <data name="AppointmentConfirmed">
+    <value>Appointment Request</value>
+    <comment></comment>
+    <lastModified>2023-05-30T09:38:29</lastModified>
+  </data>
+  <data name="SelectHospitalLocation">
+    <value>Select Hospital Location</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:01:53</lastModified>
+  </data>
+  <data name="MedicalConcern">
+    <value>Medical Concern / Request</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:00:30</lastModified>
+  </data>
+  <data name="MedicalConcernDescription">
+    <value>Please upload any medical report(s) if you have any.&lt;br/&gt;
+File(s) format: JPG/PDF only. &lt;br/&gt;
+(File size less than 10mb. If your file size is larger than the allocated size, you may insert a download link in the message box above.)</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:47:26</lastModified>
+  </data>
+  <data name="AttachFileBtn">
+    <value>Attach File</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:36:20</lastModified>
+  </data>
+  <data name="FirstOption">
+    <value>1st Option</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:57:30</lastModified>
+  </data>
+  <data name="SecondOption">
+    <value>2nd Option</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:59:01</lastModified>
+  </data>
+  <data name="PatientDetails">
+    <value>Patient's Details</value>
+    <comment></comment>
+    <lastModified>2023-05-24T07:59:32</lastModified>
+  </data>
+  <data name="PatientName">
+    <value>Patient's Name</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:00:21</lastModified>
+  </data>
+  <data name="SelectSpecialty">
+    <value>Select Specialty</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:02:26</lastModified>
+  </data>
+  <data name="PreferredDoctor">
+    <value>Preferred Doctor</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:02:49</lastModified>
+  </data>
+  <data name="Optional">
+    <value>Optional</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:03:10</lastModified>
+  </data>
+  <data name="Nationality">
+    <value>Nationality</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:04:09</lastModified>
+  </data>
+  <data name="Gender">
+    <value>Gender</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:04:38</lastModified>
+  </data>
+  <data name="DateofBirth">
+    <value>Date of Birth</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:05:10</lastModified>
+  </data>
+  <data name="PassportNo">
+    <value>Passport no.</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:06:32</lastModified>
+  </data>
+  <data name="EmailAddress">
+    <value>Email Address</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:07:08</lastModified>
+  </data>
+  <data name="WhatsAppContactNumber">
+    <value>Contact Number (preferable contactable via WhatsApp</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:07:50</lastModified>
+  </data>
+  <data name="CountryCode">
+    <value>Country Code</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:08:49</lastModified>
+  </data>
+  <data name="ContactNumber">
+    <value>Contact Number</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:09:11</lastModified>
+  </data>
+  <data name="AlternativeContactNumber">
+    <value>Alternative Contact Number</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:09:34</lastModified>
+  </data>
+  <data name="RequiredFieldsDescription">
+    <value>*indicates required fields</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:10:46</lastModified>
+  </data>
+  <data name="IHHMYConsent">
+    <value>I have read, understood, and consent to IHH MY {0}.</value>
+    <comment></comment>
+    <lastModified>2023-05-29T13:45:26</lastModified>
+  </data>
+  <data name="PDPNotice">
+    <value>Personal Data Protection Notice</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:12:24</lastModified>
+  </data>
+  <data name="AgreeReceiveMarketingMessage">
+    <value>I agree to receive marketing-related messages or collaterals.</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:13:11</lastModified>
+  </data>
+  <data name="VerifyHuman">
+    <value>*Please validate the Google reCaptcha</value>
+    <comment></comment>
+    <lastModified>2023-05-31T07:45:20</lastModified>
+  </data>
+  <data name="Next">
+    <value>Next</value>
+    <comment></comment>
+    <lastModified>2023-05-24T08:14:15</lastModified>
+  </data>
+  <data name="PassportName">
+    <value>Name (as per Passport)</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:06:13</lastModified>
+  </data>
+  <data name="Submit">
+    <value>Submit</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:08:14</lastModified>
+  </data>
+  <data name="Date">
+    <value>Date</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:39:01</lastModified>
+  </data>
+  <data name="Time">
+    <value>Time</value>
+    <comment></comment>
+    <lastModified>2023-05-24T09:39:20</lastModified>
+  </data>
+  <data name="ChooseLocation">
+    <value>Choose a location</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:58:52</lastModified>
+  </data>
+  <data name="ChooseSpecialty">
+    <value>Choose a specialty</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:59:04</lastModified>
+  </data>
+  <data name="SearchSelectDoctor">
+    <value>Search or select a doctor</value>
+    <comment></comment>
+    <lastModified>2023-05-29T09:57:36</lastModified>
+  </data>
+  <data name="YourPreferredTime">
+    <value>Your Preferred Time</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:07:40</lastModified>
+  </data>
+  <data name="SelectNationality">
+    <value>Select a nationality</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:12:52</lastModified>
+  </data>
+  <data name="SelectGender">
+    <value>Select a gender</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:13:23</lastModified>
+  </data>
+  <data name="EnterEmail">
+    <value>Enter email</value>
+    <comment></comment>
+    <lastModified>2023-05-29T10:14:17</lastModified>
+  </data>
+  <data name="RadioBtnRequiredMessage">
+    <value>Please indicate tick (✔) in boxes above.</value>
+    <comment></comment>
+    <lastModified>2023-05-31T12:24:50</lastModified>
+  </data>
+  <data name="IHHAppointmentConsent">
+    <value>Kindly note that this is not a confirmed appointment. Our Customer Service team will contact you to finalise your appointment date &amp; time based on doctor's availability.</value>
+    <comment></comment>
+    <lastModified>2023-05-29T11:07:11</lastModified>
+  </data>
+  <data name="IHHAppointmentConfirmMessage">
+    <value>I have read and confirmed that the details above are accurate.</value>
+    <comment></comment>
+    <lastModified>2023-05-29T11:09:42</lastModified>
+  </data>
+  <data name="EnquiryForm">
+    <value>Enquiry Form</value>
+    <comment></comment>
+    <lastModified>2023-05-29T13:29:43</lastModified>
+  </data>
+  <data name="OurDoctors">
+    <value>Our Doctors</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:22:13</lastModified>
+  </data>
+  <data name="Specialty">
+    <value>Specialty</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:22:34</lastModified>
+  </data>
+  <data name="Language">
+    <value>Language(s)</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:22:56</lastModified>
+  </data>
+  <data name="CertificationQualifications">
+    <value>Certification &amp; Qualifications</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:24:09</lastModified>
+  </data>
+  <data name="MakeAnAppointment">
+    <value>Make an Appointment</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:24:59</lastModified>
+  </data>
+  <data name="ViewProfile">
+    <value>View Profile</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:25:22</lastModified>
+  </data>
+  <data name="ClinicHours">
+    <value>Clinic Hours</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:25:46</lastModified>
+  </data>
+  <data name="Day">
+    <value>Day</value>
+    <comment></comment>
+    <lastModified>2023-05-30T02:27:00</lastModified>
+  </data>
+  <data name="SelectLocation">
+    <value>Select Location</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:17:05</lastModified>
+  </data>
+  <data name="Others">
+    <value>Others</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:29:34</lastModified>
+  </data>
+  <data name="HealthScreening">
+    <value>Health Screening</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:29:53</lastModified>
+  </data>
+  <data name="RelatedSpecialtyDoctors">
+    <value>Related Specialty Doctors</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:34:31</lastModified>
+  </data>
+  <data name="ClinicHourTime">
+    <value>Time</value>
+    <comment></comment>
+    <lastModified>2023-05-30T06:38:24</lastModified>
+  </data>
+  <data name="NotAgreeReceiveMarketingMessage">
+    <value>I do not agree to receive marketing-related messages or collaterals.</value>
+    <comment></comment>
+    <lastModified>2023-05-31T03:58:08</lastModified>
+  </data>
+  <data name="FileSizeError">
+    <value>File Size More Than 10MB</value>
+    <comment></comment>
+    <lastModified>2023-06-01T01:19:30</lastModified>
+  </data>
+  <data name="RoomsRates">
+    <value>Rooms &amp; Rates</value>
+    <comment></comment>
+    <lastModified>2023-06-02T02:51:06</lastModified>
+  </data>
+  <data name="NoRoomsRates">
+    <value>Dont have any room and rates information.</value>
+    <comment></comment>
+    <lastModified>2023-06-02T02:53:45</lastModified>
+  </data>
+  <data name="RoomsRatesPrice">
+    <value>+ per night</value>
+    <comment></comment>
+    <lastModified>2023-06-02T02:55:19</lastModified>
+  </data>
+  <data name="RoomsRatesNote">
+    <value>The Management reserves the right to change these prices without prior notice &amp; pricing is correct at publish time.</value>
+    <comment></comment>
+    <lastModified>2023-06-02T03:11:52</lastModified>
+  </data>
+  <data name="FlightsToMalaysia">
+    <value>Flights to Malaysia</value>
+    <comment></comment>
+    <lastModified>2023-06-02T05:35:34</lastModified>
+  </data>
+  <data name="TGFrom">
+    <value>From</value>
+    <comment></comment>
+    <lastModified>2023-06-02T05:37:56</lastModified>
+  </data>
+  <data name="YourPreferredSpecialty">
+    <value>Your Preferred Specialty</value>
+    <comment></comment>
+    <lastModified>2023-06-02T05:59:34</lastModified>
+  </data>
+  <data name="PhoneNo">
+    <value>Phone No.</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:07:09</lastModified>
+  </data>
+  <data name="PlaceToVisit">
+    <value>Places To Visit</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:39:40</lastModified>
+  </data>
+  <data name="Activities">
+    <value>Activities</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:34:17</lastModified>
+  </data>
+  <data name="Explore">
+    <value>Explore</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:34:38</lastModified>
+  </data>
+  <data name="Shop">
+    <value>Shop</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:35:27</lastModified>
+  </data>
+  <data name="WhatsappUs">
+    <value>WhatsApp Us</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:59:02</lastModified>
+  </data>
+  <data name="EmailUs">
+    <value>Email Us</value>
+    <comment></comment>
+    <lastModified>2023-06-02T06:59:18</lastModified>
+  </data>
+  <data name="TGNeedToBook">
+    <value>Need to book an Airport Transfer?</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:19:02</lastModified>
+  </data>
+  <data name="TGHospital">
+    <value>IHH Hospitals in Malaysia</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:07:35</lastModified>
+  </data>
+  <data name="TGGrabCar">
+    <value>Alternatively, you can take a GrabCar or taxi from the airport to</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:09:46</lastModified>
+  </data>
+  <data name="TGTransportTopText">
+    <value>   &lt;h2 class="airport-transfer-header"&gt;
+                                        Airport Transfer
+                                    &lt;/h2&gt;
+                                    &lt;p&gt;
+                                        You may request for our complimentary shuttle service (subject to availability) &lt;br&gt;
+                                        Please make a reservation at least two days in advance by providing the following information:
+                                    &lt;/p&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Name and passport of patient and caregivers&lt;/li&gt;
+                                        &lt;li&gt;Contact details&lt;/li&gt;
+                                        &lt;li&gt;Flight details&lt;/li&gt;
+                                        &lt;li&gt;Appointment details&lt;/li&gt;
+                                    &lt;/ul&gt;</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:11:12</lastModified>
+  </data>
+  <data name="TGHotels">
+    <value>Hotels</value>
+    <comment></comment>
+    <lastModified>2023-06-02T07:48:09</lastModified>
+  </data>
+  <data name="ShowAllFlights">
+    <value>Show All Flights</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:10:41</lastModified>
+  </data>
+  <data name="ShowAllPlaces">
+    <value>Show All Places To Visit</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:11:13</lastModified>
+  </data>
+  <data name="ShowAllHotels">
+    <value>Show All Hotels</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:11:57</lastModified>
+  </data>
+  <data name="LatestPackages">
+    <value>Latest Packages and Promotions</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:44:04</lastModified>
+  </data>
+  <data name="CallUs">
+    <value>Call Us</value>
+    <comment></comment>
+    <lastModified>2023-06-02T08:49:10</lastModified>
+  </data>
+  <data name="Doctors">
+    <value>Doctors</value>
+    <comment></comment>
+    <lastModified>2023-06-02T09:12:30</lastModified>
+  </data>
+  <data name="ViewMore">
+    <value>View more</value>
+    <comment></comment>
+    <lastModified>2023-06-02T09:13:52</lastModified>
+  </data>
+  <data name="MakeanAppointmentorEnquiry">
+    <value>Make an Appointment or Enquiry</value>
+    <comment></comment>
+    <lastModified>2023-06-04T15:54:05</lastModified>
+  </data>
+  <data name="CostofTreatment">
+    <value>Cost of Treatment</value>
+    <comment></comment>
+    <lastModified>2023-06-04T16:17:36</lastModified>
+  </data>
+  <data name="All">
+    <value>All</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:28:06</lastModified>
+  </data>
+  <data name="SearchByLocation">
+    <value>Search by Location</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:32:52</lastModified>
+  </data>
+  <data name="SearchByHospital">
+    <value>Search by Hospital</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:33:29</lastModified>
+  </data>
+  <data name="SearchBySpecialty">
+    <value>Search by Specialty</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:35:11</lastModified>
+  </data>
+  <data name="SearchByDoctor">
+    <value>Search by Doctor Name</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:36:40</lastModified>
+  </data>
+  <data name="PreferredHospital">
+    <value>Your Preferred Hospital</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:39:55</lastModified>
+  </data>
+  <data name="PreferredDoctorName">
+    <value>Your Preferred Doctor Name</value>
+    <comment></comment>
+    <lastModified>2023-06-06T01:41:19</lastModified>
+  </data>
+  <data name="YourPreferredLocation">
+    <value>Your Preferred Location</value>
+    <comment></comment>
+    <lastModified>2023-06-06T02:16:30</lastModified>
+  </data>
+  <data name="Packages">
+    <value>Packages</value>
+    <comment></comment>
+    <lastModified>2023-06-06T02:22:13</lastModified>
+  </data>
+  <data name="NoPackages">
+    <value>No packages</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:12:35</lastModified>
+  </data>
+  <data name="Home">
+    <value>Home</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:23:00</lastModified>
+  </data>
+  <data name="UrlHospitalTG">
+    <value>Find Everything You Need to Know About Travelling to Malaysia</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:46:57</lastModified>
+  </data>
+  <data name="UrlHospitalTGButton">
+    <value>View Our Travel Guide</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:47:26</lastModified>
+  </data>
+  <data name="ThankYou">
+    <value>Thank You!</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:52:39</lastModified>
+  </data>
+  <data name="ReceivedApptDesc1">
+    <value>We have received your appointment request.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:54:12</lastModified>
+  </data>
+  <data name="ReceivedApptDesc2">
+    <value>Our customer service will contact you within the next business day to confirm your appointment.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:55:18</lastModified>
+  </data>
+  <data name="ListOfHospitals">
+    <value>List of Hospitals</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:56:04</lastModified>
+  </data>
+  <data name="ReceivedApptDesc3">
+    <value>If you require immediate medical assistance, please call us at:</value>
+    <comment></comment>
+    <lastModified>2023-06-06T03:56:11</lastModified>
+  </data>
+  <data name="ReceivedApptDesc4">
+    <value>Kindly note this is not a confirmed appointment.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:00:14</lastModified>
+  </data>
+  <data name="Currency">
+    <value>RM</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:00:35</lastModified>
+  </data>
+  <data name="TravelGuideRecommendDesc">
+    <value>Let's make your trip more comfortable. Below are our suggested airlines &amp; accomodations.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:22:05</lastModified>
+  </data>
+  <data name="RecommendAirlineTitle">
+    <value>Who To Fly With</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:23:36</lastModified>
+  </data>
+  <data name="FindOutMore">
+    <value>Find Out More</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:27:01</lastModified>
+  </data>
+  <data name="MoreTravelTips">
+    <value>More Travel Tips!</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:28:07</lastModified>
+  </data>
+  <data name="RecommendHotelTitle">
+    <value>Where To Stay</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:29:29</lastModified>
+  </data>
+  <data name="Disclaimers">
+    <value>Disclaimers:</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:41:45</lastModified>
+  </data>
+  <data name="DisclaimersDesc1">
+    <value>Kindly note that this is not a confirmed appointment. Our Customer Service team will contact you to finalise your appointment date &amp; time based on doctor's availability.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:43:20</lastModified>
+  </data>
+  <data name="DisclaimersDesc2">
+    <value>I have read and confirmed that the details above are accurate.</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:44:06</lastModified>
+  </data>
+  <data name="Back">
+    <value>Back</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:45:15</lastModified>
+  </data>
+  <data name="MedicalConcernMessage">
+    <value>*Indicate 'N/A' if it is not applicable</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:52:25</lastModified>
+  </data>
+  <data name="Female">
+    <value>Female</value>
+    <comment></comment>
+    <lastModified>2023-06-06T04:55:01</lastModified>
+  </data>
+  <data name="FlyFromIndonesia">
+    <value>Fly from Indonesia to </value>
+    <comment></comment>
+    <lastModified>2023-06-06T05:27:48</lastModified>
+  </data>
+  <data name="Destination">
+    <value>Destination</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:11:12</lastModified>
+  </data>
+  <data name="FilterBy">
+    <value>Filter by</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:13:19</lastModified>
+  </data>
+  <data name="CopyrightText">
+    <value>Copyright ©2023 Pantai Medical Centre Sdn Bhd.
+</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:19:06</lastModified>
+  </data>
+  <data name="PackagesPromotions">
+    <value>Packages and Promotions</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:37:22</lastModified>
+  </data>
+  <data name="Articles">
+    <value>Articles</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:41:01</lastModified>
+  </data>
+  <data name="MoreArticles">
+    <value>More Articles</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:42:11</lastModified>
+  </data>
+  <data name="Monday">
+    <value>Monday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:54:11</lastModified>
+  </data>
+  <data name="Tuesday">
+    <value>Tuesday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:54:40</lastModified>
+  </data>
+  <data name="Wednesday">
+    <value>Wednesday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:54:59</lastModified>
+  </data>
+  <data name="Thursday">
+    <value>Thursday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:55:21</lastModified>
+  </data>
+  <data name="Friday">
+    <value>Friday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:55:51</lastModified>
+  </data>
+  <data name="Saturday">
+    <value>Saturday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:56:19</lastModified>
+  </data>
+  <data name="Sunday">
+    <value>Sunday</value>
+    <comment></comment>
+    <lastModified>2023-06-06T06:57:28</lastModified>
+  </data>
+  <data name="SearchResults">
+    <value>Search Results</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:55:39</lastModified>
+  </data>
+  <data name="Search">
+    <value>Search</value>
+    <comment></comment>
+    <lastModified>2023-06-06T07:58:53</lastModified>
+  </data>
+  <data name="Topics">
+    <value>Topics</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:15:20</lastModified>
+  </data>
+  <data name="MinsRead">
+    <value>mins read</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:17:04</lastModified>
+  </data>
+  <data name="AwardsAccreditions">
+    <value>Awards &amp; Accreditions</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:24:27</lastModified>
+  </data>
+  <data name="PleaseSelectYourPreferredHospital">
+    <value>Please Select Your Preferred Hospital</value>
+    <comment></comment>
+    <lastModified>2023-06-06T08:56:02</lastModified>
+  </data>
+  <data name="ReceivedEnquiryDesc1">
+    <value>We have received your enquiry request.</value>
+    <comment></comment>
+    <lastModified>2023-06-07T08:28:56</lastModified>
+  </data>
+  <data name="DoctorAppointment">
+    <value>Doctor's Appointment</value>
+    <comment></comment>
+    <lastModified>2023-06-08T08:57:00</lastModified>
+  </data>
+  <data name="HealthScreeningAppointment">
+    <value>Health Screening Appointment</value>
+    <comment></comment>
+    <lastModified>2023-06-08T08:57:53</lastModified>
+  </data>
+</root>

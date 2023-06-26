@@ -1,0 +1,778 @@
+:root {
+    --mhx-dark-red: #a40100;
+    --mhx-red: #f94b28;
+    --mhx-light-yellow: #fef8ef;
+    --mhx-sky-blue: #2b8ccb;
+    --ihh-grey: #8aa4ba;
+}
+
+.mhx-2023 {
+    > * {
+        max-width: 1920px;
+        margin: auto;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        color: inherit;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        line-height: 2rem;
+        font-weight: bold;
+        color: inherit;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .mhx-banner {
+        display: grid;
+        position: relative;
+
+        > * {
+            grid-area: 1 / 1;
+        }
+
+        .banner-wrapper {
+            img {
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .desktop {
+                display: block;
+            }
+
+            .tablet,
+            .mobile {
+                display: none;
+            }
+
+            @media (width < 992px) {
+                .desktop {
+                    display: none;
+                }
+
+                .tablet {
+                    display: block;
+                    width: 50%;
+                    margin-left: auto;
+                    object-fit: contain;
+                }
+            }
+
+            @media (width < 768px) {
+                .tablet {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                    margin: 0rem auto;
+                    text-align: center;
+                    padding-top: 3rem;
+
+                    .logo {
+                        width: min(300px, 100%);
+                    }
+
+                    .banner-info {
+                        background: #a779c9;
+                        padding: 2rem 1rem;
+                        margin: 2rem 0rem;
+                        color: white;
+
+                        h3 {
+                            margin: 0px;
+                            line-height: 3rem;
+                        }
+                    }
+
+                    .talent {
+                        width: min(500px, 100%);
+                    }
+                }
+            }
+        }
+
+        .banner-desc {
+            align-self: center;
+            padding-top: calc(5% + 1rem);
+            padding-bottom: 1rem;
+
+            .mhx-logo {
+                width: 200px;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: #2a2a2a;
+                margin-bottom: 0rem;
+            }
+
+            @media (width < 992px) {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        @media (width < 992px) {
+            background: #f8de7e;
+        }
+
+        @media (width < 768px) {
+            display: flex;
+            flex-direction: column-reverse;
+            background: #ecf9fe;
+        }
+    }
+
+    // .hospital-highlight {
+    //     background: var(--mhx-light-yellow);
+
+    //     h3.header {
+    //         color: var(--mhx-sky-blue);
+    //         font-weight: bold;
+    //         margin-bottom: 1.5rem;
+    //         text-align: center;
+    //     }
+
+    //     p {
+    //         margin-bottom: 1.5rem;
+    //         color: #2a2a2a;
+    //     }
+
+    //     .view-all-btn {
+    //         --btn-color: var(--mhx-sky-blue);
+
+    //         border: 1px solid var(--btn-color);
+    //         background: var(--btn-color);
+    //         text-decoration: none;
+    //         color: white;
+    //         padding: 0.75rem 1.5rem;
+    //         border-radius: 50px;
+    //         transition: all 0.3s ease-in;
+    //         font-weight: bold;
+    //         display: block;
+    //         width: max-content;
+
+    //         &:hover {
+    //             background: white;
+    //             color: var(--btn-color);
+    //         }
+    //     }
+
+    //     .hospital-highlight-slick {
+    //         .hospital-item {
+    //             height: 350px;
+    //             display: grid;
+    //             cursor: pointer;
+
+    //             > * {
+    //                 grid-area: 1/1;
+    //             }
+
+    //             &::before {
+    //                 content: '';
+    //                 position: relative;
+    //                 display: block;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 // background: rgba(0,0,0,0.5);
+    //                 transition: all 0.3s ease-in-out;
+    //                 z-index: 2;
+    //                 grid-area: 1/1;
+    //             }
+
+    //             img {
+    //                 object-fit: cover;
+    //                 height: 100%;
+    //                 position: relative;
+    //                 z-index: 1;
+    //             }
+
+    //             h4 {
+    //                 margin-bottom: 0rem;
+    //                 padding: 1rem;
+    //                 align-self: end;
+    //                 color: white;
+    //                 z-index: 3;
+    //             }
+
+    //             &:hover {
+    //                 &::before {
+    //                     background: rgba(0,0,0,0.3);
+    //                 }
+    //             }
+    //         }
+
+    //         .slick-dots {
+    //             bottom: -35px;
+    //         }
+    //     }
+
+    //     .hospital-details-slick {
+    //         padding-top: 3rem;
+
+    //         .hosptial-details-item {
+    //             display: flex;
+
+    //             .detials-img-wrapper {
+    //                 width: 30%;
+    //                 border-radius: 1rem 0rem 0rem 1rem;
+    //                 overflow: hidden;
+
+    //                 img {
+    //                     height: 100%;
+    //                     object-fit: cover;
+    //                 }
+    //             }
+
+    //             .details-desc {
+    //                 width: 70%;
+    //                 padding: 1.5rem;
+    //                 background: white;
+    //                 border-radius: 0rem 1rem 1rem 0rem;
+    //                 overflow: hidden;
+
+    //                 .hospital-name {
+    //                     font-weight: bold;
+    //                     color: var(--ihh-grey);
+    //                 }
+
+    //                 p {
+    //                     margin-bottom: 1rem;
+    //                 }
+
+    //                 .hospital-usp {
+    //                     .usp-items {
+    //                         display: flex;
+    //                         flex-wrap: wrap;
+    //                         justify-content: center;
+    //                         align-items: start;
+    //                         row-gap: 1rem;
+
+    //                         .usp-item {
+    //                             flex-basis: 33.3333333333%;
+    //                             min-height: 65px;
+    //                             display: flex;
+    //                             align-items: center;
+    //                             padding: 0rem 0.5rem;
+
+    //                             .usp-item-img {
+    //                                 width: 50px;
+    //                                 height: 50px;
+    //                                 object-fit: contain;
+    //                                 margin-right: 0.5rem;
+    //                             }
+
+    //                             .usp-item-text-top {
+    //                                 color: rgb(98, 181, 221);
+    //                                 font-weight: 600;
+    //                                 font-size: 1.25rem;
+    //                                 line-height: 1;
+    //                                 display: flex;
+    //                                 flex-direction: column-reverse;
+    //                                 margin-bottom: 0.5rem;
+    //                             }
+
+    //                             .usp-item-text-bottom {
+    //                                 color: rgb(121, 151, 175);
+    //                                 font-weight: 600;
+    //                                 font-size: 0.875rem;
+    //                                 line-height: 1;
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+    //             }
+
+    //             @media (width < 992px) {
+    //                 flex-direction: column;
+
+    //                 .detials-img-wrapper {
+    //                     width: 100%;
+    //                     border-radius: 1rem 1rem 0rem 0rem;
+    //                 }
+
+    //                 .details-desc {
+    //                     width: 100%;
+    //                     padding: 1rem;
+    //                     border-radius: 0rem 0rem 1rem 1rem;
+    //                 }
+
+    //                 .hospital-usp {
+    //                     .usp-items {
+    //                         .usp-item {
+    //                             flex-basis: 50% !important;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+
+    //             @media (width < 768px) {
+    //                 .detials-img-wrapper {
+    //                     img {
+    //                         width: 100%;
+    //                         height: 275px;
+    //                         object-fit: cover;
+    //                     }
+    //                 }
+    //             }
+    //         }
+
+    //         .slick-dots {
+    //             bottom: -35px;
+    //         }
+    //     }
+    // }
+
+    .hospital-highlight {
+        h3.header {
+            color: var(--mhx-sky-blue);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .hospital-lists {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+
+            .hospital-item {
+                display: grid;
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                border-radius: 0.5rem;
+
+                > * {
+                    grid-area: 1/1;
+                }
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                }
+
+                .img-back {
+                    opacity: 1;
+                    transition: all 0.15s linear;
+                    transform: rotateY(90deg);
+                }
+
+                .hospital-img {
+                    display: grid;
+                    z-index: 1;
+                    transition: all 0.3s linear;
+                    backface-visibility: hidden;
+                    isolation: isolate;
+
+                    > * {
+                        grid-area: 1/1;
+                    }
+
+                    img {
+                        z-index: 1;
+                    }
+
+                    h3 {
+                        color: white;
+                        padding: 1rem;
+                        align-self: end;
+                        font-size: 1rem;
+                        margin: 0px;
+                        line-height: 1.25rem;
+                        z-index: 3;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 20%;
+                        background: linear-gradient(to bottom, transparent, black);
+                        bottom: 0px;
+                        z-index: 2;
+                    }
+
+                    @media (width < 768px) {
+                        h3 {
+                            padding: 0.5rem;
+                        }
+
+                        &::after {
+                            height: 30%;
+                        }
+                    }
+                }
+
+                &:nth-child(-n + 3) {
+                    flex-basis: calc(33.333333% - 1rem);
+                }
+
+                &:nth-child(n + 4) {
+                    flex-basis: calc(25% - 1rem);
+                }
+
+                &.hoverable {
+                    // &:hover {
+                    //     .hospital-img {
+                    //         transform: rotateY(180deg);
+                    //     }
+
+                    //     .img-back {
+                    //         opacity: 1;
+                    //         transition-delay: 0.15s;
+                    //         transform: rotateY(0deg);
+                    //     }
+                    // }
+                }
+
+                @media (width < 1200px) {
+                    &:nth-child(-n + 3),
+                    &:nth-child(n + 4) {
+                        flex-basis: calc(50% - 1rem);
+                    }
+                }
+
+                @media (width < 768px) {
+                    &:nth-child(-n + 3),
+                    &:nth-child(n + 4) {
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .event-highlight {
+        color: white;
+        background: #a779c9;
+
+        .eh-item-wrapper {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            .eh-item {
+                text-align: center;
+                border-radius: 1rem 1rem 0rem 0rem;
+                padding: 1.5rem;
+                cursor: pointer;
+
+                img {
+                    width: min(80px, 100%);
+                    margin-bottom: 1rem;
+                }
+
+                h4 {
+                    margin: 0px;
+                }
+
+                &.selected {
+                    background: #afa4cc;
+                }
+            }
+        }
+
+        .eh-item-dropdown {
+            display: none;
+
+            &.dropdown {
+                margin: 2rem auto 0rem auto;
+
+                img {
+                    width: 40px;
+                    margin-right: 1rem;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                    margin-bottom: 0rem;
+                    margin-right: 1rem;
+                }
+
+                .dropdown-toggle {
+                    --btn-color: var(--mhx-sky-blue);
+                    display: flex;
+                    width: max-content;
+                    align-items: center;
+                    text-align: left;
+                    width: 100%;
+                }
+
+                .dropdown-item {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem;
+                }
+            }
+        }
+
+        @media (width < 768px) {
+            background: #afa4cc;
+
+            .eh-item-wrapper {
+                display: none;
+            }
+
+            .eh-item-dropdown {
+                display: block;
+            }
+        }
+    }
+
+    .event-highlight-details {
+        background: #afa4cc;
+
+        .eh-detils-item-wrapper {
+            .eh-details-item {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 125px;
+                    height: 100%;
+                    margin-right: 1rem;
+                }
+
+                .eh-details {
+                    color: white;
+
+                    ul:last-child {
+                        margin-bottom: 0rem;
+                    }
+                }
+
+                @media (width < 768px) {
+                    flex-direction: column;
+
+                    img {
+                        margin-right: 0rem;
+                        margin-bottom: 1rem;
+                        align-self: center;
+                    }
+
+                    .eh-details {
+                        h4 {
+                            text-align: center;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .online-offer {
+        display: grid;
+        background: url("/ResourcePackages/IHH/assets/dist/images/mhx-2023/online-offer.webp?ts=201");
+        width: 100%;
+        object-fit: cover;
+        background-position: center;
+        padding: 150px 0px;
+
+        > .container {
+            align-self: center;
+        }
+
+        .sub-header,
+        .header {
+            color: var(--mhx-sky-blue);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .dropdown.online-offer-dropdown {
+            --btn-color: var(--mhx-sky-blue);
+
+            .dropdown-toggle {
+                &::after {
+                    margin-left: 0.75rem;
+                }
+            }
+
+            @media (width < 375px) {
+                font-size: 0.75rem;
+
+                .dropdown-toggle {
+                    &::after {
+                        font-size: 1rem;
+                        margin-top: 0.25rem;
+                    }
+                }
+
+                .dropdown-item {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        .mobile-talent {
+            display: none;
+        }
+
+        @media (width < 768px) {
+            background: #ecf4f7;
+            text-align: center;
+            padding: 3rem 0rem 0rem;
+
+            .dropdown {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .mobile-talent {
+                display: block;
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    .gallery {
+        background: #f5f5f7;
+
+        h3 {
+            color: var(--mhx-sky-blue);
+            text-align: center;
+        }
+
+        .gallery-images-slick {
+            .gallery-images {
+                display: grid;
+                margin-top: 2rem;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.75rem;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 0.5rem;
+                    aspect-ratio: 1/1;
+                }
+
+                @media (width < 1200px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @media (width < 768px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+    }
+
+    .official-partners {
+        h3 {
+            color: var(--mhx-sky-blue);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        @media (width < 768px) {
+            img {
+                width: min(250px, 100%);
+            }
+        }
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        width: 15px;
+        border-bottom: 4px solid var(--mhx-sky-blue);
+        border-right: 4px solid var(--mhx-sky-blue);
+    }
+}
+
+.jcl {
+    justify-content: left !important;
+}
+
+.dropdown {
+    --btn-color: var(--mhx-sky-blue);
+    width: max-content;
+
+    .dropdown-toggle {
+        background: var(--btn-color);
+        color: white;
+        border: 2px solid var(--btn-color);
+        padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+        border-radius: 50px;
+
+        &::after {
+            margin-left: auto;
+            transition: all 0.3s ease-in-out;
+            border-top: 0.5em solid;
+            border-right: 0.5em solid transparent;
+            border-left: 0.5em solid transparent;
+        }
+
+        &.show::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    .dropdown-menu {
+        inset: -2px auto auto 0px;
+        width: 100%;
+        padding: 0rem;
+
+        .dropdown-item {
+            padding: 0.5rem 1.5rem;
+
+            &:active {
+                background: var(--btn-color);
+                color: white;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: -1.5rem;
+    }
+}
+
+.loc-name-main {
+    font-size: 1.15rem;
+    margin-top: -0.15rem;
+    font-weight: 500;
+}
+
+.maps-buttons {
+    margin-left: 2rem;
+    display: flex;
+    gap: 0.35rem;
+
+    a {
+        background-color: white;
+
+        border-radius: 50%;
+        color: #3b607e;
+        display: flex;
+        width: 3.25rem;
+        height: 3.25rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,18 @@
+Checking references started.
+
+
+New references count: 9
+Setting target framework version.
+
+Added references count:'9'
+Reference added:'System.Security'
+Reference added:'Microsoft.IdentityModel.JsonWebTokens'
+Reference added:'Microsoft.IdentityModel.Logging'
+Reference added:'Microsoft.IdentityModel.Protocols'
+Reference added:'Microsoft.IdentityModel.Protocols.OpenIdConnect'
+Reference added:'Microsoft.IdentityModel.Protocols.WsFederation'
+Reference added:'Microsoft.IdentityModel.Tokens'
+Reference added:'Microsoft.IdentityModel.Xml'
+Reference added:'Telerik.Sitefinity.Frontend.Recommendations'
+
+Not found assemblies count:'0'

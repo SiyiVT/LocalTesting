@@ -1,0 +1,59 @@
+@using SitefinityWebApp.Helpers;
+@{
+    var urlPath = FrontendUrlHelper.GetCurrentPageAbsolutePath();
+    var logo = "ihhlogo.webp";
+    var hrefUrl = FrontendUrlHelper.GetLocalPrefix()+ "/";
+}
+
+@*
+if (urlPath.ToLower().Contains("kota-kinabalu"))
+{
+logo = "gkk_logo860c3525-2f73-4a02-bcf9-2d36baeed1fb.png";
+hrefUrl = "/kota-kinabalu";
+}
+else if (urlPath.ToLower().Contains("kuala-lumpur") || urlPath.ToLower().Contains("myhealth360"))
+{
+logo = "gkl_logo88923045-9319-40b9-b23d-c25208373410.png";
+hrefUrl = "/kuala-lumpur";
+}
+else if (urlPath.ToLower().Contains("medini-johor"))
+{
+logo = "gmh_logoda15e0e9-255e-4c7c-824f-92f935486bbb.png";
+hrefUrl = "/medini-johor";
+}
+else if (urlPath.ToLower().Contains("penang"))
+{
+logo = "gpg_logofbac9f25-42fe-4e9b-89a9-3822fcb81314.png";
+hrefUrl = "/penang";
+}
+*@
+
+@*//else if (
+// urlPath.ToLower().Contains("home") ||
+// urlPath.ToLower().Contains("laman-utama") ||
+// urlPath.ToLower().Contains("beranda") ||
+// urlPath.Equals("/") ||
+// urlPath.ToLower().Contains("doctors") ||
+// urlPath.ToLower().Contains("about-us") ||
+// urlPath.ToLower().Contains("tentang-kami") )
+//{
+// logo = "logo99705e3a-db7f-435a-adf7-406fd810b42b.svg";
+// hrefUrl = "/";
+//}*@
+
+<a class="navbar-brand" href="@hrefUrl" style="    border-right: 1px solid lightgray;    padding-right: 1rem;">
+    <img src="/ResourcePackages/IHH/assets/dist/images/header/@logo" alt="Logo" class="navbar-brand-img d-inline-block align-text-top me">
+</a>
+<div class="d-flex me-auto brands-logo-navbar-wrapper" style="">
+
+    <a class="navbar-brand  d-flex d-xl-flex" href="@FrontendUrlHelper.GetLocalPrefix()/gleneagles">
+        <img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/gleneagles-logo-stack.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo">
+    </a>
+   
+    <a class="navbar-brand d-flex d-xl-flex" href="@FrontendUrlHelper.GetLocalPrefix()/pantai">
+        <img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/pantai-logo.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo">
+    </a>
+     <a class="navbar-brand d-flex d-xl-flex" href="@FrontendUrlHelper.GetLocalPrefix()/princecourt-medicalcentre">
+        <img src="/ResourcePackages/IHH/assets/dist/images/IHHLanding/prince_logo.webp" alt="Logo brands-logo" class="brands-logo-img d-inline-block align-text-top me  brands-logo">
+    </a>
+</div>

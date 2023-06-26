@@ -1,0 +1,29 @@
+----------------------------------------
+Timestamp: 6/21/2023 1:42:29 AM
+
+Message: Db Migration Complexity: Extending
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/21/2023 1:42:29 AM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/21/2023 1:42:29 AM
+
+Message: Adding a foreign key constraint(s) to an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 6/21/2023 1:42:29 AM
+
+Message: -- add column for field Ihhdoctor.ImageUrl
+ALTER TABLE [doctors_ihhdoctor] ADD [ImageUrl] NVARCHAR(255) NULL
+
+
+----------------------------------------

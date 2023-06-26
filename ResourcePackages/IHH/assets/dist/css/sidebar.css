@@ -1,0 +1,55 @@
+.mobile-sidebar {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: max-content;
+    z-index: 52;
+    background-color: #75b4d4;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-sidebar{
+        display: none;
+    }
+}
+
+.mobile-sidebar .sidebar-item {
+    width: 25%;
+    text-align: center;
+    transition: all 0.25s ease;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid white;
+}
+
+.mobile-sidebar .sidebar-item:last-child {
+
+    border-right: none;
+}
+
+.mobile-sidebar .sidebar-item .sidebar-item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.mobile-sidebar .sidebar-item .sidebar-item-icon {
+    width: 50%;
+    max-height: 40px;
+    font-size: 0rem;
+    margin-bottom: 5px;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+
+.mobile-sidebar .sidebar-item .sidebar-item-text {
+    color: white;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    align-self: center;
+}
